@@ -59,6 +59,13 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid var(--light-color);
 }
 
+.button-hero:active{
+  transition: all 0.3s ease-in;
+  background: var(--background-color);
+  color: var(--primary-color);
+  border: 2px solid var(--light-color);
+}
+
 .button-hero::after{
   content: "";
   display: block;
@@ -179,4 +186,89 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+/* Enhanced Category Card Styles */
+.category-card {
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 1.5rem;
+  background-color: var(--light-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.category-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-card .card-body {
+  padding: 1rem;
+}
+
+.category-card .card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.category-card .card-text {
+  color: var(--text-color);
+  margin-top: 0.5rem;
+}
+
+/* Product Card Styles */
+.product .card {
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s;
+}
+
+.product .card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.product .card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.product .card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.product .card-text {
+  color: var(--text-color);
+  margin-top: 0.5rem;
 }
