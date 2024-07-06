@@ -46,6 +46,28 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--light-color);
 }
 
+.button-hero{
+  background: transparent;
+  border: 2px solid var(--light-color);
+  color: var(--light-color);
+}
+
+.button-hero:hover{
+  transition: all 0.3s ease-in;
+  background: var(--light-color);
+  color: var(--primary-color);
+  border: 2px solid var(--light-color);
+}
+
+.button-hero::after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--light-color);
+  transition: width 0.3s;
+}
+
 .navbar {
   transition: background-color 0.5s ease;
 }
