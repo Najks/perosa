@@ -1,0 +1,86 @@
+{
+    "coffee": {
+        "kava_v_zrnih": [
+            {
+                "id": 1,
+                "name": "Kava LUSSO",
+                "description": "Mešanica pražene kave z odličnim telesom in kremastostjo.",
+                "image": "images/product-images/coffee/product1.jpg"
+            },
+            {
+                "id": 2,
+                "name": "LUSSO Espresso Caffee",
+                "description": "Mešanica Lusso Caffè je rezultat kombinacije edinstvenih in neponovljivih dejavnikov.",
+                "image": "images/product-images/coffee/product2.jpg"
+            }
+        ],
+        "mleta_kava": [
+            {
+                "id": 5,
+                "name": "Mleta Kava",
+                "description": "Sveže mleta kava za najboljši okus.",
+                "image": "images/product-images/coffee/product3.jpg"
+            },
+            {
+                "id": 6,
+                "name": "Podi/Cialde",
+                "description": "Enostavno za uporabo, brez kompromisov pri okusu.",
+                "image": "images/product-images/coffee/product4.jpg"
+            }
+        ],
+        "barista_products": [
+            {
+                "id": 3,
+                "name": "Barista Kit",
+                "description": "Komplet za bariste z vsem potrebnim orodjem.",
+                "image": "images/barista-products/barista-kit.png"
+            },
+            {
+                "id": 4,
+                "name": "Mlinček za Kavo",
+                "description": "Profesionalen mlinček za kavo za popolno mletje.",
+                "image": "images/barista-products/coffee-grinder.png"
+            }
+        ]
+    },
+    "service": [
+        {
+            "id": 1,
+            "name": "Servis Kavnega Aparata 1",
+            "description": "Opis servisa kavnega aparata 1.",
+            "image": "images/product-images/service/product1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Servis Kavnega Aparata 2",
+            "description": "Opis servisa kavnega aparata 2.",
+            "image": "images/product-images/service/product2.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Espresso Machine",
+            "description": "Profesionalni espresso aparat za popolno kavo.",
+            "image": "images/product-images/service/espresso-machine.jpg"
+        }
+    ],
+    "cleaning": [
+        {
+            "id": 1,
+            "name": "Čistilo 1",
+            "description": "Opis čistila 1.",
+            "image": "images/product-images/cleaning/product1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Čistilo 2",
+            "description": "Opis čistila 2.",
+            "image": "images/product-images/cleaning/product2.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Cleaning Solution",
+            "description": "Čistilna sredstva za kavne aparate.",
+            "image": "images/product-images/cleaning/cleaning-solution.jpg"
+        }
+    ]
+}
