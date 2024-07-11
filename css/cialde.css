@@ -1,0 +1,82 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+header .navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1140px;
+}
+
+/* Cialde specific styles */
+.carousel-inner img {
+  object-fit: contain; /* Use contain to zoom out the images */
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel-indicators li {
+  background-color: #6f4e37;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #6f4e37;
+  border-radius: 50%;
+}
+
+/* Product styles */
+.cialde-product .card {
+  border: 1px solid #6f4e37;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cialde-product .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cialde-product .card-img-top {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s;
+}
+
+.cialde-product .card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.cialde-product .card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.cialde-product .card-title {
+  color: #6f4e37;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.cialde-product .card-text {
+  color: #343a40;
+  margin-top: 0.5rem;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #6f4e37;
+  margin: 2rem 0;
+}
