@@ -1,19 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const navbar = document.querySelector('.navbar');
-
-  const handleScroll = () => {
-    if (window.scrollY > 5) {
-      navbar.classList.add('navbar-transparent');
-      navbar.classList.remove('bg-dark');
-    } else {
-      navbar.classList.remove('navbar-transparent');
-      navbar.classList.add('bg-dark');
-    }
-  };
-
-  handleScroll();
-  window.addEventListener('scroll', handleScroll);
-
   fetch('data/products.json')
     .then(response => response.json())
     .then(data => {

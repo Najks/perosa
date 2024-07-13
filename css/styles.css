@@ -584,3 +584,32 @@ footer p {
   margin-top: 1rem;
   font-size: 0.9rem;
 }
+
+/* tc styles */
+.blockquote-custom {
+  font-style: italic;
+  color: #555;
+  padding-left: 1em;
+  border-left: 0.25em solid #ccc;
+}
+
+ul.custom-bullet {
+  list-style-type: none;
+  padding-left: 1.5em;
+}
+
+ul.custom-bullet li {
+  margin-bottom: 0.5em;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+ul.custom-bullet li::before {
+  content: "\2022";
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
