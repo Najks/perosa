@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero {
-  background: url('images/coffee-bg1.jpg') no-repeat center center/cover;
+  background: url('/perosa/images/skupaj-produkti/IMG_0137.jpg') no-repeat center center/cover;
   height: 100vh;
   color: #fff;
   display: flex;
@@ -68,6 +68,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.5rem;
 }
 
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
 .button-hero{
   background: transparent;
   border: 2px solid var(--light-color);
@@ -95,6 +100,46 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   background: var(--light-color);
   transition: width 0.3s;
+}
+
+.carousel-item {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  padding: 1rem;
+}
+
+.carousel-item img {
+  max-height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner {
+  background-color: white;
+  padding: 2rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 95%; 
+  margin: 0 auto; 
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #343a40;
+  border-radius: 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 3%;
 }
 
 header {

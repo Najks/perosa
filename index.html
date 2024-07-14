@@ -81,50 +81,81 @@
         </div>
       </div>
     </section>
+  
+    <section class="container my-5">
+      <h2 class="text-center">Naše Blagovne Znamke</h2>
+      <div id="brandCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-3"><img src="images/brands/elettrobar.png" class="d-block w-100" alt="Brand 1"></div>
+              <div class="col-3"><img src="images/brands/remidag.jpg" class="d-block w-100" alt="Brand 2"></div>
+              <div class="col-3"><img src="images/brands/Bokk-paper.jpg" class="d-block w-100" alt="Brand 3"></div>
+              <div class="col-3"><img src="images/brands/futura2.png" class="d-block w-100" alt="Brand 4"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-3"><img src="images/brands/lusso-kara.png" class="d-block w-100" alt="Brand 5"></div>
+              <div class="col-3"><img src="images/brands/Lusso-caffee.png" class="d-block w-100" alt="Brand 6"></div>
+              <div class="col-3"><img src="images/brands/Icematic.png" class="d-block w-100" alt="Brand 7"></div>
+              <div class="col-3"><img src="images/brands/ipc-pulex.jpg" class="d-block w-100" alt="Brand 8"></div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#brandCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#brandCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Kavne Storitve. Vse pravice pridržane.</p>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-left">
+          <h4 class="footer-title">Hitre Povezave</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Domov</a></li>
+            <li><a href="about.html" class="footer-link">O Nas</a></li>
+            <li><a href="products.html" class="footer-link">Izdelki</a></li>
+            <li><a href="cialde.html" class="footer-link">Cialde</a></li>
+            <li><a href="contact.html" class="footer-link">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-left contact-info">
+          <h4 class="footer-title about-contact-title">Kontaktirajte Nas</h4>
+          <p><i class="fas fa-map-marker-alt mr-2"></i>Pavel Peroša s.p., Vršnik 5, 2201 Zgornja Kungota, Slovenija</p>
+          <p><i class="fas fa-phone-alt mr-2"></i>Telefonska številka: +386 40 568 073</p>
+          <p><i class="fas fa-envelope mr-2"></i>E-pošta: <a href="mailto:pavelperosa@gmail.com" class="footer-link-mail">pavelperosa@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12 text-center">
+          <div class="social-icons">
+            <a href="#" class="mr-3"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="mr-3"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mt-3 footer-credits">&copy; 2024 Kavne Storitve. Vse pravice pridržane.</p>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    const backgrounds = [
-      {
-        image: 'images/hero.jpg',
-        title: 'Kavna Storitev Gostinske Storitve in Dobava Kave',
-        subtitle: 'Najboljša kavna storitev v mestu. Ponujamo gostinske storitve in dobavo kave.'
-      },
-      {
-        image: 'images/hero2.jpg',
-        title: 'Najbolj Kvalitetna Kava',
-        subtitle: 'Izberite med široko paleto kavnih zrn najvišje kvalitete.'
-      },
-      {
-        image: 'images/skupaj-produkti/IMG_0169.jpg',
-        title: 'Sveža in Okusna Kava',
-        subtitle: 'Okusite svežino in aromo vsake skodelice kave, ki jo pripravimo za vas.'
-      }
-    ];
-
-    let currentBackgroundIndex = 0;
-
-    function switchBackground() {
-      const heroSection = document.getElementById('hero');
-      const heroTitle = document.getElementById('hero-title');
-      const heroSubtitle = document.getElementById('hero-subtitle');
-      currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length;
-      const background = backgrounds[currentBackgroundIndex];
-      heroSection.style.backgroundImage = `url('${background.image}')`;
-      heroTitle.textContent = background.title;
-      heroSubtitle.textContent = background.subtitle;
-    }
-
-    setInterval(switchBackground, 5000);
-  </script>
 </body>
 
 </html>
