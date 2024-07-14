@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="sl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kavna Storitev</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-transparent">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Kavna Storitev</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Domov</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">O Nas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="products.html">Izdelki</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <header>
+    <p><i class="fas fa-envelope"></i> Vsa naročila se pošljejo na naš e-mail: <a href="mailto:info@perosa.com">info@perosa.com</a></p>
   </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Peroša</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Domov</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">O Nas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Izdelki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <main>
     <section class="hero d-flex align-items-center justify-content-center text-center" id="hero">
-      <div class="hero-content">
-        <h1 class="display-4">Kavna Storitev Gostinske Storitve in Dobava Kave</h1>
-        <p class="lead">Najboljša kavna storitev v mestu. Ponujamo gostinske storitve in dobavo kave.</p>
+      <div class="hero-content" id="hero-content">
+        <h1 class="display-4" id="hero-title">Kavna Storitev Gostinske Storitve in Dobava Kave</h1>
+        <p class="lead" id="hero-subtitle">Najboljša kavna storitev v mestu. Ponujamo gostinske storitve in dobavo kave.</p>
         <a href="#" class="btn btn-transparent btn-lg button-hero">Naročite zdaj</a>
       </div>
     </section>
@@ -78,42 +82,49 @@
       </div>
     </section>
   </main>
-  <footer class="bg-dark text-white text-center py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-left">
-          <h4 class="footer-title">Hitre Povezave</h4>
-          <ul class="footer-links">
-            <li><a href="index.html" class="footer-link">Domov</a></li>
-            <li><a href="about.html" class="footer-link">O Nas</a></li>
-            <li><a href="products.html" class="footer-link">Izdelki</a></li>
-            <li><a href="cialde.html" class="footer-link">Cialde</a></li>
-            <li><a href="contact.html" class="footer-link">Kontakt</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 text-left contact-info">
-          <h4 class="footer-title about-contact-title">Kontaktirajte Nas</h4>
-          <p><i class="fas fa-map-marker-alt mr-2"></i>Pavel Peroša s.p., Vršnik 5, 2201 Zgornja Kungota, Slovenija</p>
-          <p><i class="fas fa-phone-alt mr-2"></i>Telefonska številka: +386 40 568 073</p>
-          <p><i class="fas fa-envelope mr-2"></i>E-pošta: <a href="mailto:pavelperosa@gmail.com" class="footer-link-mail">pavelperosa@gmail.com</a></p>
-        </div>
-      </div>
-      <div class="row mt-3">
-        <div class="col-md-12 text-center">
-          <div class="social-icons">
-            <a href="#" class="mr-3"><i class="fab fa-facebook fa-2x"></i></a>
-            <a href="#" class="mr-3"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="mt-3 footer-credits">&copy; 2024 Kavne Storitve. Vse pravice pridržane.</p>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Kavne Storitve. Vse pravice pridržane.</p>
   </footer>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    const backgrounds = [
+      {
+        image: 'images/hero.jpg',
+        title: 'Kavna Storitev Gostinske Storitve in Dobava Kave',
+        subtitle: 'Najboljša kavna storitev v mestu. Ponujamo gostinske storitve in dobavo kave.'
+      },
+      {
+        image: 'images/hero2.jpg',
+        title: 'Najbolj Kvalitetna Kava',
+        subtitle: 'Izberite med široko paleto kavnih zrn najvišje kvalitete.'
+      },
+      {
+        image: 'images/skupaj-produkti/IMG_0169.jpg',
+        title: 'Sveža in Okusna Kava',
+        subtitle: 'Okusite svežino in aromo vsake skodelice kave, ki jo pripravimo za vas.'
+      }
+    ];
+
+    let currentBackgroundIndex = 0;
+
+    function switchBackground() {
+      const heroSection = document.getElementById('hero');
+      const heroTitle = document.getElementById('hero-title');
+      const heroSubtitle = document.getElementById('hero-subtitle');
+      currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length;
+      const background = backgrounds[currentBackgroundIndex];
+      heroSection.style.backgroundImage = `url('${background.image}')`;
+      heroTitle.textContent = background.title;
+      heroSubtitle.textContent = background.subtitle;
+    }
+
+    setInterval(switchBackground, 5000);
+  </script>
 </body>
+
 </html>
