@@ -1,82 +1,172 @@
-/* General styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #343a40;
-}
-
-header .navbar {
+/* General Section Styling */
+section {
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  background: var(--background-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-  max-width: 1140px;
-}
-
-/* Cialde specific styles */
-.carousel-inner img {
-  object-fit: contain; /* Use contain to zoom out the images */
-  height: 500px;
-  width: 100%;
-  border-radius: 10px;
-}
-
-.carousel-indicators li {
-  background-color: #6f4e37;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #6f4e37;
-  border-radius: 50%;
-}
-
-/* Product styles */
-.cialde-product .card {
-  border: 1px solid #6f4e37;
-  transition: transform 0.3s, box-shadow 0.3s;
-  overflow: hidden;
+/* Hero Section */
+.hero {
+  background: url('/perosa/images/skupaj-produkti/IMG_0139\(1\).jpg') no-repeat center center/cover;
+  height: 90vh;
+  color: #fff;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.cialde-product .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.cialde-product .card-img-top {
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
-  transition: transform 0.3s;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.cialde-product .card:hover .card-img-top {
-  transform: scale(1.05);
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
-.cialde-product .card-body {
-  padding: 1rem;
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.button-hero {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  transition: all 0.3s ease-in;
+}
+
+.button-hero:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border: 2px solid var(--primary-color);
+}
+
+/* Feature Section */
+.feature-box {
+  padding: 1.5rem;
+  background: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-.cialde-product .card-title {
-  color: #6f4e37;
+.feature-box i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.feature-box h4 {
+  color: var(--primary-color);
   font-weight: 600;
   margin-top: 1rem;
 }
 
-.cialde-product .card-text {
-  color: #343a40;
-  margin-top: 0.5rem;
+.feature-box p {
+  color: var(--text-color);
+  font-size: 1rem;
 }
 
-.separator {
-  border: none;
-  border-top: 1px solid #6f4e37;
-  margin: 2rem 0;
+/* Product Display Section */
+#cialde-products h2,
+#cialde-products p {
+  text-align: center;
+}
+
+#cialde-products h2 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+#cialde-products p {
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+#cialde-products .product-display {
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+#cialde-products .product-display:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#cialde-products .product-display img {
+  max-height: 65%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+#cialde-products .product-display img:hover {
+  transform: scale(1.05);
+}
+
+#cialde-products .product-display h3 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#cialde-products .product-display .product-description {
+  color: var(--text-color);
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#cialde-products .product-display .product-price {
+  color: #6f4e37;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#cialde-products .product-display .product-shipping {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

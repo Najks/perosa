@@ -7,38 +7,40 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-  <header>
-    <p><i class="fas fa-envelope"></i> Vsa naročila se pošljejo na naš e-mail: <a href="mailto:info@perosa.com">info@perosa.com</a></p>
-  </header>
-
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Peroša</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Domov</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">O Nas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="products.html">Izdelki</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Kontakt</a>
-          </li>
-        </ul>
+  <div class="sticky-top">
+    <header>
+      <p><i class="fas fa-envelope"></i> Vsa povpraševanja se pošljejo na naš e-mail: <a href="mailto:info@perosa.com">info@perosa.com</a></p>
+    </header>
+  
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Peroša</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Domov</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">O Nas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Izdelki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Kontakt</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 
   <main class="container my-5">
     <section class="about">
@@ -91,7 +93,7 @@
           </div>
         </div>
       </div>
-      <div class="row my-5">
+      <div class="row my-5 justify-content-center">
         <div class="col-lg-12 text-center">
           <h2 class="about-subtitle h3 mb-4">Prodaja Nove in Rabljene Gostinske Opreme</h2>
           <p>Profesionalna čistilna sredstva in oprema za objektno higieno in nego perila:</p>
@@ -126,7 +128,7 @@
           <h2 class="about-contact-title h4 mb-4">Kontaktirajte Nas</h2>
           <p><i class="fas fa-map-marker-alt mr-2"></i>Pavel Peroša s.p., Vršnik 5, 2201 Zgornja Kungota, Slovenija</p>
           <p><i class="fas fa-phone-alt mr-2"></i>Tel. št.: +386 40 568 073</p>
-          <p><i class="fas fa-envelope mr-2"></i>E-pošta: <a href="mailto:pavelperosa@gmail.com">pavelperosa@gmail.com</a></p>
+          <p><i class="fas fa-envelope mr-2"></i>E-pošta: <a href="mailto:pavelperosa@gmail.com" class="about-email">pavelperosa@gmail.com</a></p>
         </div>
       </div>
     </section>
@@ -169,5 +171,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

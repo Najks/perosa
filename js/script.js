@@ -17,7 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error fetching product data:', error));
     });
   });
+  // Highlight active link
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active');
+    }
+  });
 });
+
+
 
 function displayProducts(category, data) {
   const productContainer = document.getElementById('product-container');
@@ -65,7 +74,7 @@ const backgrounds = [
     subtitle: 'Izberite med široko paleto kavnih zrn najvišje kvalitete.'
   },
   {
-    image: '/perosa/images/skupaj-produkti/IMG_0137.jpg',
+    image: '/perosa/images/skupaj-produkti/IMG_0169.jpg',
     title: 'Sveža in Okusna Kava',
     subtitle: 'Okusite svežino in aromo vsake skodelice kave, ki jo pripravimo za vas.'
   }
