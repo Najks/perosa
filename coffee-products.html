@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Products</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .container {
+      margin-top: 50px;
+    }
+
+    h1, h5 {
+      color: #6f4e37;
+    }
+
+    .index-card {
+      margin-bottom: 30px;
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .index-card img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.3s ease;
+    }
+
+    .index-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .index-card .card-body {
+      padding: 20px;
+      background-color: #f3f0eb;
+    }
+
+    .index-card .card-title {
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .index-card .card-text {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: #6f4e37;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background-color: #4b3026;
+    }
+
+    /* Specific Card Styles */
+    .whole-bean-card img, .ground-coffee-card img, .cups-card img, .espresso-card img {
+      border-radius: 15px 0 0 15px;
+    }
+
+    .ground-coffee-card, .espresso-card {
+      flex-direction: row-reverse;
+    }
+
+    .cups-card, .espresso-card {
+      flex-direction: row;
+    }
+
+    .whole-bean-card, .ground-coffee-card, .cups-card, .espresso-card {
+      display: flex;
+      align-items: center;
+      height: 300px;
+    }
+
+    .whole-bean-card .card-body, .ground-coffee-card .card-body, .cups-card .card-body, .espresso-card .card-body {
+      width: 50%;
+    }
+
+    /* Additional Images Styling */
+    .additional-images {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .additional-images img {
+      width: 32%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .additional-images img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">Naši Kavna Izdelki</h1>
+    <div class="row" id="categories">
+      <!-- Whole Bean Coffee Card (Image Left) -->
+      <div class="col-md-12">
+        <div class="card whole-bean-card index-card">
+          <img src="images/kava-zrno.jpg" alt="Whole Bean Coffee Image">
+          <div class="card-body">
+            <h5 class="card-title">LUSSO KAVA V CELIH ZRNIH</h5>
+            <p class="card-text">Fine mešanice, pražene po italijanski tradiciji.</p>
+            <a href="whole-bean.html" class="btn btn-primary">Več informacij</a>
+            <div class="additional-images">
+              <img src="images/coffee1.jpg" alt="Coffee Image 1">
+              <img src="images/coffee2.jpg" alt="Coffee Image 2">
+              <img src="images/coffee3.jpg" alt="Coffee Image 3">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Ground Coffee Card (Image Right) -->
+      <div class="col-md-12">
+        <div class="card ground-coffee-card index-card">
+          <img src="images/mleta-kava.jpg" alt="Ground Coffee Image">
+          <div class="card-body">
+            <h5 class="card-title">MLETA KAVA, PODI/CIALDE</h5>
+            <p class="card-text">M O D R A / D E C A F F E I N A T O - M E Š A N I C A K A V E</p>
+            <a href="ground-coffee.html" class="btn btn-primary">Več informacij</a>
+            <div class="additional-images">
+              <img src="images/ground1.jpg" alt="Ground Coffee Image 1">
+              <img src="images/ground2.jpg" alt="Ground Coffee Image 2">
+              <img src="images/ground3.jpg" alt="Ground Coffee Image 3">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Porcelain and Glass Cups Card (Image Left) -->
+      <div class="col-md-12">
+        <div class="card cups-card index-card">
+          <img src="images/salce/IMG_0145.jpg" alt="Cups Image">
+          <div class="card-body">
+            <h5 class="card-title">PORCELANSKE SKODELICE</h5>
+            <p class="card-text">Odkrijte čar naših skodelic za podaljšano, kapučino in espresso ter čaja.</p>
+            <a href="cups.html" class="btn btn-primary">Več informacij</a>
+            <div class="additional-images">
+              <img src="images/salce/IMG_0100.jpg" alt="Cups Image 1">
+              <img src="images/salce/IMG_0102.jpg" alt="Cups Image 2">
+              <img src="images/salce/IMG_0105.jpg" alt="Cups Image 3">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Lusso Espresso Coffee Card (Image Right) -->
+      <div class="col-md-12">
+        <div class="card espresso-card index-card">
+          <img src="images/espresso.jpg" alt="Espresso Image">
+          <div class="card-body">
+            <h5 class="card-title">LUSSO ESPRESSO CAFFE</h5>
+            <p class="card-text">Mešanica Lusso Caffè je rezultat kombinacije edinstvenih in neponovljivih dejavnikov.</p>
+            <a href="espresso.html" class="btn btn-primary">Več informacij</a>
+            <div class="additional-images">
+              <img src="images/espresso1.jpg" alt="Espresso Image 1">
+              <img src="images/espresso2.jpg" alt="Espresso Image 2">
+              <img src="images/espresso3.jpg" alt="Espresso Image 3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

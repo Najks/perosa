@@ -49,21 +49,6 @@ section {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-.button-hero {
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 0.75rem 2rem;
-  font-size: 1.25rem;
-  transition: all 0.3s ease-in;
-}
-
-.button-hero:hover {
-  background: var(--primary-color);
-  color: #fff;
-  border: 2px solid var(--primary-color);
-}
-
 /* Feature Section */
 .feature-box {
   padding: 1.5rem;

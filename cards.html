@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Products</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      margin-top: 20px;
+    }
+    .card {
+      margin-bottom: 20px;
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .btn {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Minimalist Card */
+    .minimalist-card .card-body {
+      text-align: center;
+    }
+    .minimalist-card .btn {
+      background-color: #6f4e37;
+      color: #fff;
+    }
+    .minimalist-card .btn:hover {
+      background-color: #4b3026;
+    }
+
+    /* Modern Card */
+    .modern-card .rating i {
+      color: #ffd700;
+    }
+    .modern-card .btn-gradient {
+      background: linear-gradient(45deg, #6f4e37, #4b3026);
+      color: #fff;
+    }
+    .modern-card .btn-gradient:hover {
+      background: linear-gradient(45deg, #4b3026, #6f4e37);
+    }
+
+    /* Classic Card */
+    .classic-card .card-frame {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    /* Interactive Card */
+    .interactive-card .card-body {
+      position: relative;
+      overflow: hidden;
+    }
+    .interactive-card .card-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .interactive-card .card-body:hover .card-overlay {
+      opacity: 1;
+    }
+
+    /* Infographic Style Card */
+    .infographic-card .infographics {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+    }
+    .infographic-card .info-item {
+      text-align: center;
+    }
+    .infographic-card .info-item i {
+      display: block;
+      margin-bottom: 5px;
+      color: #6f4e37;
+    }
+
+    /* Vintage Card */
+    .vintage-card {
+      background: #f8f1e4;
+    }
+    .vintage-card .card-body {
+      text-align: center;
+    }
+
+    /* Luxurious Card */
+    .luxurious-card {
+      background: #fff7e6;
+      border: 1px solid #e0c07c;
+    }
+    .luxurious-card .btn {
+      background-color: #d4af37;
+      color: #fff;
+    }
+    .luxurious-card .btn:hover {
+      background-color: #b8860b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <!-- Minimalist Card -->
+      <div class="col-md-4">
+        <div class="card minimalist-card">
+          <img src="images/kava-zrno/Kava-zrno.jpg" alt="Product Image" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">ESE Espresso</h5>
+            <p class="card-text">LUSSO caffè pods/cialda v papirnatem filtru, kremasta, polna in uravnotežena kava z okusom sveže pražene kave.</p>
+            <a href="ese-espresso.html" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Modern Card -->
+      <div class="col-md-4">
+        <div class="card modern-card">
+          <img src="images/kava-zrno/Kava-zrno.jpg" alt="Product Image" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">ESE Brezkofeinska</h5>
+            <p class="card-text">Brezkofeinska kava LUSSO v papirnatem filtru, kakovostna, kremasta in polnega telesa s popolno uravnoteženim okusom.</p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <a href="ese-brezkofeinska.html" class="btn btn-gradient">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Classic Card -->
+      <div class="col-md-4">
+        <div class="card classic-card">
+          <div class="card-frame">
+            <img src="images/kava-zrno/Kava-zrno.jpg" alt="Product Image" class="card-img-top">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">ESE Lungo</h5>
+            <p class="card-text">LUSSO caffè pods/cialda v papirnatem filtru, dolga in polna kava z okusom sveže pražene kave.</p>
+            <a href="images/kava-zrno/Kava-zrno.jpg" class="btn btn-primary">More Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Interactive Card -->
+      <div class="col-md-4">
+        <div class="card interactive-card">
+          <div class="card-body">
+            <img src="images/kava-zrno/Kava-zrno.jpg" alt="Product Image" class="card-img-top">
+            <div class="card-overlay">
+              <h5 class="card-title">ESE Cappuccino</h5>
+              <p class="card-text">LUSSO caffè pods/cialda v papirnatem filtru, bogata in polna kava z okusom sveže pražene kave.</p>
+              <a href="ese-cappuccino.html" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Infographic Style Card -->
+      <div class="col-md-4">
+        <div class="card infographic-card">
+          <img src="images/kava-zrno/Kava-zrno.jpg" alt="Product Image" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">ESE Mocha</h5>
+            <p class="card-text">Kava z bogato in polno aromo, s čokoladnimi notami. Idealna za ljubitelje sladke in kremaste kave.</p>
+            <div class="infographics">
+              <div class="info-item"><i class="fas fa-map-marker-alt"></i> Brazil</div>
+              <div class="info-item"><i class="fas fa-coffee"></i> Arabica</div>
+              <div class="info-item"><i class="fas fa-tint"></i> Medium Roast</div>
+            </div>
+            <a href="ese-mocha.html" class="btn btn-primary">More Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Vintage Card -->
+      <div class="col-md-4">
+        <div class="card vintage-card">
+          <img src="images/kava-zrno/Kava-zrno.jpg" alt="Product Image" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">ESE Classic</h5>
+            <p class="card-text">Tradicionalna kava z bogato aromo in polnim okusom, idealna za ljubitelje klasične kave.</p>
+            <a href="ese-classic.html" class="btn btn-primary">More Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Luxurious Card -->
+      <div class="col-md-4">
+        <div class="card luxurious-card">
+          <img src="images/kava-zrno/Kava-zrno.jpg" alt="Product Image" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">ESE Gold</h5>
+            <p class="card-text">Premium kava z bogato aromo in polnim okusom. Idealna za ljubitelje luksuzne kave.</p>
+            <a href="ese-gold.html" class="btn">More Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

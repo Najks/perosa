@@ -1,59 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const productContainer = document.getElementById('product-container');
+  const backgrounds = [
+    {
+      image: 'images/hero.jpg',
+      title: 'Kavna Storitev Gostinske Storitve in Dobava Kave',
+      subtitle: 'Najboljša kavna storitev v mestu. Ponujamo gostinske storitve in dobavo kave.'
+    },
+    {
+      image: 'images/hero2.jpg',
+      title: 'Najbolj Kvalitetna Kava',
+      subtitle: 'Izberite med široko paleto kavnih zrn najvišje kvalitete.'
+    },
+    {
+      image: '/perosa/images/skupaj-produkti/IMG_0169.jpg',
+      title: 'Sveža in Okusna Kava',
+      subtitle: 'Okusite svežino in aromo vsake skodelice kave, ki jo pripravimo za vas.'
+    }
+  ];
 
-  function filterProducts(category) {
-    fetch('data/products.json')
-      .then(response => response.json())
-      .then(data => {
-        displayProducts(category, data);
-      })
-      .catch(error => console.error('Error fetching product data:', error));
+  let currentBackgroundIndex = 0;
+
+  function switchBackground() {
+    const heroSection = document.getElementById('hero');
+    const heroTitle = document.getElementById('hero-title');
+    const heroSubtitle = document.getElementById('hero-subtitle');
+    heroSection.classList.add('fade-out');
+    heroTitle.classList.add('fade-out');
+    heroSubtitle.classList.add('fade-out');
+
+    setTimeout(() => {
+      currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length;
+      const background = backgrounds[currentBackgroundIndex];
+      heroSection.style.backgroundImage = `url('${background.image}')`;
+      heroTitle.textContent = background.title;
+      heroSubtitle.textContent = background.subtitle;
+
+      heroSection.classList.remove('fade-out');
+      heroTitle.classList.remove('fade-out');
+      heroSubtitle.classList.remove('fade-out');
+    }, 500);
   }
 
-  function displayProducts(category, data) {
-    productContainer.innerHTML = '';
+  setInterval(switchBackground, 5000);
 
-    let categoryData;
-    if (category === 'coffee') {
-      categoryData = [].concat(...Object.values(data.coffee));
-    } else if (category in data.coffee) {
-      categoryData = data.coffee[category];
-    } else {
-      categoryData = data[category];
+  // Highlight active link
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active');
     }
-
-    if (categoryData && Array.isArray(categoryData)) {
-      categoryData.forEach(product => {
-        const productCard = `
-          <div class="col-md-4 product" data-category="${category}">
-            <div class="card mb-4">
-              <img src="${product.image}" class="card-img-top" alt="${product.name}">
-              <div class="card-body">
-                <h5 class="card-title">${product.name}</h5>
-                <p class="card-text">${product.description}</p>
-              </div>
-            </div>
-          </div>
-        `;
-        productContainer.insertAdjacentHTML('beforeend', productCard);
-      });
-    } else {
-      productContainer.innerHTML = `<p class="text-center">No products available for this category.</p>`;
-    }
-  }
-
-  // Initially display coffee products
-  filterProducts('coffee');
-
-  // Add event listeners to sidebar items
-  document.querySelectorAll('.sidebar-item').forEach(item => {
-    item.addEventListener('click', event => {
-      event.preventDefault();
-      const category = event.target.getAttribute('onclick').split("'")[1];
-      filterProducts(category);
-    });
   });
-
-  // Make the filterProducts function available globally
-  window.filterProducts = filterProducts;
 });
