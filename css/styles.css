@@ -464,6 +464,12 @@ header a:hover {
   color: var(--light-color);
 }
 
+.form-button {
+  background-color: #6f4e37;
+  border-color: var(--light-color);
+  color: var(--light-color);
+}
+
 .contact .btn-primary:hover {
   background-color: var(--dark-accent-color);
   border-color: var(--dark-accent-color);

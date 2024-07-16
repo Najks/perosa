@@ -19,11 +19,14 @@
     .product-section h2 {
       color: #6f4e37;
       margin-bottom: 20px;
+      padding-left: 10px;
     }
 
     .product-section .main-image {
-      width: 100%;
-      height: 400px;
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      height: 300px;
       object-fit: cover;
       border-radius: 15px;
       margin-bottom: 20px;
@@ -32,17 +35,19 @@
     .product-section .description {
       margin-bottom: 20px;
       font-size: 1.1rem;
+      padding-left: 20px;
     }
 
     .product-section .additional-images {
       display: flex;
       justify-content: space-between;
       gap: 10px;
+      margin: 30px;
     }
 
     .product-section .additional-images img {
-      width: 32%;
-      height: 150px;
+      width: 33%;
+      height: 250px;
       object-fit: cover;
       border-radius: 10px;
       transition: transform 0.3s ease;
@@ -50,6 +55,9 @@
 
     .product-section .additional-images img:hover {
       transform: scale(1.05);
+    }
+    .center{
+        text-align: center;
     }
   </style>
 </head>
@@ -96,74 +104,77 @@
     </section>
 
     <section class="categories" id="categories">
-        <div class="container my-5">
-          <div class="row" id="categories">
-            <div class="col-md-12">
-              <div class="card coffee-card index-card">
-                <img src="images/skupaj-produkti/IMG_0169.jpg" alt="Coffee Products Image">
-                <div class="card-body">
-                  <h5 class="card-title">Kavni Izdelki</h5>
-                  <p class="card-text">Izberite med široko paleto kavnih izdelkov.</p>
-                  <a href="#coffee-products" class="btn btn-primary">Več informacij</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="card machine-service-card index-card">
-                <img src="images/machine-card-img.jpg" alt="Coffee Machines Service Image">
-                <div class="card-body">
-                  <h5 class="card-title">Servis Kavnih Aparatov</h5>
-                  <p class="card-text">Profesionalni servis za vse vrste kavnih aparatov.</p>
-                  <a href="servis.html" class="btn btn-primary">Več informacij</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="card cleaning-products-card index-card">
-                <img src="images/cleaning-card-img.jpg" alt="Cleaning Products Image">
-                <div class="card-body">
-                  <h5 class="card-title">Čistila</h5>
-                  <p class="card-text">Najboljša čistila za vaše kavne aparate.</p>
-                  <a href="cistila.html" class="btn btn-primary">Več informacij</a>
-                </div>
+      <div class="container my-5">
+        <div class="row" id="categories">
+          <div class="col-md-12">
+            <div class="card coffee-card index-card">
+              <img src="images/skupaj-produkti/IMG_0169.jpg" alt="Coffee Products Image">
+              <div class="card-body">
+                <h5 class="card-title">Kavni Izdelki</h5>
+                <p class="card-text">Izberite med široko paleto kavnih izdelkov.</p>
+                <a href="#coffee-products" class="btn btn-primary">Več informacij</a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-  
-      <section class="product-showcases container my-5" id="coffee-products">
-        <div class="product-section">
-          <h2>LUSSO KAVA V CELIH ZRNIH</h2>
-          <img src="images/kava-zrno.jpg" alt="Whole Bean Coffee Image" class="main-image">
-          <p class="description">Fine mešanice, pražene po italijanski tradiciji.</p>
-          <div class="additional-images">
-            <img src="images/coffee1.jpg" alt="Coffee Image 1">
-            <img src="images/coffee2.jpg" alt="Coffee Image 2">
-            <img src="images/coffee3.jpg" alt="Coffee Image 3">
+          <div class="col-md-12">
+            <div class="card machine-service-card index-card">
+              <img src="images/machine-card-img.jpg" alt="Coffee Machines Service Image">
+              <div class="card-body">
+                <h5 class="card-title">Servis Kavnih Aparatov</h5>
+                <p class="card-text">Profesionalni servis za vse vrste kavnih aparatov.</p>
+                <a href="servis.html" class="btn btn-primary">Več informacij</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card cleaning-products-card index-card">
+              <img src="images/cleaning-card-img.jpg" alt="Cleaning Products Image">
+              <div class="card-body">
+                <h5 class="card-title">Čistila</h5>
+                <p class="card-text">Najboljša čistila za vaše kavne aparate.</p>
+                <a href="cistila.html" class="btn btn-primary">Več informacij</a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="product-section">
-          <h2>MLETA KAVA, PODI/CIALDE</h2>
-          <img src="images/mleta-kava.jpg" alt="Ground Coffee Image" class="main-image">
-          <p class="description">M O D R A / D E C A F F E I N A T O - M E Š A N I C A K A V E<br>Sladko, nežno in izjemno aromatična. Mešanica najbolj kakovostne kave</p>
-          <div class="additional-images">
-            <img src="images/ground1.jpg" alt="Ground Coffee Image 1">
-            <img src="images/ground2.jpg" alt="Ground Coffee Image 2">
-            <img src="images/ground3.jpg" alt="Ground Coffee Image 3">
-          </div>
+      </div>
+    </section>
+
+    <section class="product-showcases container my-5" id="coffee-products">
+      <div class="product-section">
+        <h2>LUSSO KAVA V CELIH ZRNIH</h2>
+        <img src="images/kava-zrno.jpg" alt="Whole Bean Coffee Image" class="main-image">
+        <p class="description">Fine mešanice, pražene po italijanski tradiciji.</p>
+        <div class="additional-images">
+          <img src="images/coffee1.jpg" alt="Coffee Image 1">
+          <img src="images/coffee2.jpg" alt="Coffee Image 2">
+          <img src="images/coffee3.jpg" alt="Coffee Image 3">
         </div>
-        <div class="product-section">
-          <h2>P O R C E L A N S K E S K O D E L I C E</h2>
-          <img src="images/skodelice.jpg" alt="Cups Image" class="main-image">
-          <p class="description">Odkrijte čar naših skodelic za podaljšano, kapučino in espresso ter čaja.</p>
-          <div class="additional-images">
-            <img src="images/cups1.jpg" alt="Cups Image 1">
-            <img src="images/cups2.jpg" alt="Cups Image 2">
-            <img src="images/cups3.jpg" alt="Cups Image 3">
-          </div>
+      </div>
+      <div class="product-section">
+        <h2>PODI/CIALDE</h2>
+        <img src="images/cialde/IMG_0177.jpg" alt="Ground Coffee Image" class="main-image">
+        <p class="description">Cialde/podsi ESE Espresso<br>LUSSO caffè pods/cialda v papirnatem filtru, kremasta, polna in uravnotežena kava z okusom sveže pražene kave. </p>
+        <div class="additional-images">
+          <img src="images/cialde/IMG_0170.jpg" alt="Ground Coffee Image 1">
+          <img src="images/cialde/IMG_0173.jpg" alt="Ground Coffee Image 2">
+          <img src="images/cialde/IMG_0176.jpg" alt="Ground Coffee Image 3">
         </div>
-      </section>  
+        <div class="center">
+        <a href="cialde.html" class="btn form-button">Več informacij</a>
+        </div>
+      </div>
+      <div class="product-section">
+        <h2>P O R C E L A N S K E S K O D E L I C E</h2>
+        <img src="images/skodelice.jpg" alt="Cups Image" class="main-image">
+        <p class="description">Odkrijte čar naših skodelic za podaljšano, kapučino in espresso ter čaja.</p>
+        <div class="additional-images">
+          <img src="images/cups1.jpg" alt="Cups Image 1">
+          <img src="images/cups2.jpg" alt="Cups Image 2">
+          <img src="images/cups3.jpg" alt="Cups Image 3">
+        </div>
+      </div>
+    </section>
 
     <section class="container my-5">
       <h2 class="text-center">Zaupajo nam tudi :</h2>
@@ -236,7 +247,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-document.getElementById('scroll-to-categories').addEventListener('click', function(event) {
+    document.getElementById('scroll-to-categories').addEventListener('click', function(event) {
       event.preventDefault();
       const navbarHeight = document.querySelector('.sticky-top').offsetHeight;
       const categoriesSection = document.querySelector('#categories');
