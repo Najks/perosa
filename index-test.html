@@ -14,50 +14,59 @@
       padding: 30px 0;
       border-bottom: 1px solid #ddd;
       background-color: #f9f9f9;
+      text-align: center;
     }
 
     .product-section h2 {
       color: #6f4e37;
-      margin-bottom: 20px;
-      padding-left: 10px;
-    }
-
-    .product-section .main-image {
-      display: block;
-      margin: 0 auto;
-      width: 50%;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 15px;
       margin-bottom: 20px;
     }
 
     .product-section .description {
       margin-bottom: 20px;
       font-size: 1.1rem;
-      padding-left: 20px;
     }
 
-    .product-section .additional-images {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      margin: 30px;
+    .card {
+      margin-bottom: 20px;
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .product-section .additional-images img {
-      width: 33%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .product-section .additional-images img:hover {
-      transform: scale(1.05);
+    .card img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
-    .center{
-        text-align: center;
+
+    .btn {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .minimalist-card .card-body {
+      height: 200px;
+      text-align: center;
+    }
+
+    .minimalist-card .btn {
+      background-color: #6f4e37;
+      color: #fff;
+    }
+
+    .minimalist-card .btn:hover {
+      background-color: #4b3026;
+    }
+
+    .minimalist-card-cups {
+      margin: 0 15px;
+    }
+
+    .text-center {
+      text-align: center;
     }
   </style>
 </head>
@@ -71,7 +80,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">Peroša</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -142,36 +152,78 @@
 
     <section class="product-showcases container my-5" id="coffee-products">
       <div class="product-section">
-        <h2>LUSSO KAVA V CELIH ZRNIH</h2>
-        <img src="images/kava-zrno.jpg" alt="Whole Bean Coffee Image" class="main-image">
-        <p class="description">Fine mešanice, pražene po italijanski tradiciji.</p>
-        <div class="additional-images">
-          <img src="images/coffee1.jpg" alt="Coffee Image 1">
-          <img src="images/coffee2.jpg" alt="Coffee Image 2">
-          <img src="images/coffee3.jpg" alt="Coffee Image 3">
+        <div class="text-center">
+          <h2>LUSSO KAVA V CELIH ZRNIH</h2>
+          <p class="description">Fine mešanice, pražene po italijanski tradiciji.</p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card minimalist-card">
+                <img src="images/kava-zrno/Kava-zrno.jpg" alt="Product Image" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Lusso Kava v Zrnih</h5>
+                  <p class="card-text">Fine mešanice, pražene po italijanski tradiciji.</p>
+                  <a href="kava-v-zrnih.html" class="btn mt-4">Več informacij</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card minimalist-card">
+                <img src="images/kava-zrno/Kava-zrno2.jpg" alt="Product Image" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Lusso Espresso Caffe</h5>
+                  <p class="card-text">Mešanica Lusso Caffè je rezultat kombinacije edinstvenih in neponovljivih dejavnikov.</p>
+                  <a href="espresso-caffe.html" class="btn">Več informacij</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="product-section">
-        <h2>PODI/CIALDE</h2>
-        <img src="images/cialde/IMG_0177.jpg" alt="Ground Coffee Image" class="main-image">
-        <p class="description">Cialde/podsi ESE Espresso<br>LUSSO caffè pods/cialda v papirnatem filtru, kremasta, polna in uravnotežena kava z okusom sveže pražene kave. </p>
-        <div class="additional-images">
-          <img src="images/cialde/IMG_0170.jpg" alt="Ground Coffee Image 1">
-          <img src="images/cialde/IMG_0173.jpg" alt="Ground Coffee Image 2">
-          <img src="images/cialde/IMG_0176.jpg" alt="Ground Coffee Image 3">
+        <div class="text-center">
+          <h2>MLETA KAVA, PODI/CIALDE</h2>
+          <p class="description">M O D R A / D E C A F F E I N A T O - M E Š A N I C A K A V E<br>Sladko, nežno in izjemno aromatična. Mešanica najbolj kakovostne kave</p>
         </div>
-        <div class="center">
-        <a href="cialde.html" class="btn form-button">Več informacij</a>
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="card minimalist-card">
+              <img src="images/cialde/IMG_0177.jpg" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Decaf Coffee Pods</h5>
+                <p class="card-text">Kava brez kofeina z bogatim okusom in aromo. Idealna za večerne ure.</p>
+                <a href="decaf-pods.html" class="btn">Več informacij</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card minimalist-card">
+              <img src="images/cialde/IMG_0170.jpg" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Classic Coffee Pods</h5>
+                <p class="card-text">Tradicionalna kava z bogato aromo in okusom. Idealna za ljubitelje klasične kave.</p>
+                <a href="classic-pods.html" class="btn">Več informacij</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="product-section">
-        <h2>P O R C E L A N S K E S K O D E L I C E</h2>
-        <img src="images/skodelice.jpg" alt="Cups Image" class="main-image">
-        <p class="description">Odkrijte čar naših skodelic za podaljšano, kapučino in espresso ter čaja.</p>
-        <div class="additional-images">
-          <img src="images/cups1.jpg" alt="Cups Image 1">
-          <img src="images/cups2.jpg" alt="Cups Image 2">
-          <img src="images/cups3.jpg" alt="Cups Image 3">
+      <div class="product-section ">
+        <div class="text-center">
+          <h2>Porcelanske Skodelice</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="card minimalist-card minimalist-card-cups">
+              <img src="images/salce/IMG_0123.jpg" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Set Porcelanksih skodelic</h5>
+                <p class="card-text">Odkrijte čar naših skodelic za podaljšano, kapučino in espresso ter čaja.</p>
+                <a href="porcelan-skodelice.html" class="btn">Več informacij</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -245,7 +297,7 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/4.5.2/js/bootstrap.min.js"></script>
   <script>
     document.getElementById('scroll-to-categories').addEventListener('click', function(event) {
       event.preventDefault();

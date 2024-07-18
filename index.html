@@ -9,86 +9,256 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+  .btn-about {
+      background-color: #6f4e37;
+      color: #fff;
+    }
+    .product-section {
+      padding: 30px 0;
+      border-bottom: 1px solid #ddd;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .product-section h2 {
+      color: #6f4e37;
+      margin-bottom: 20px;
+    }
+
+    .product-section .description {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .card {
+      margin-bottom: 20px;
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .btn {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .minimalist-card .card-body {
+      height: 200px;
+      text-align: center;
+    }
+
+    .minimalist-card .btn {
+      background-color: #6f4e37;
+      color: #fff;
+    }
+
+    .minimalist-card .btn:hover {
+      background-color: #4b3026;
+    }
+
+    .minimalist-card-cups {
+      margin: 0 15px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .about-us {
+      padding: 50px 0;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .about-us h2 {
+      color: #6f4e37;
+      margin-bottom: 20px;
+    }
+
+    .about-us p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .about-us .btn {
+      margin: 0 10px;
+    }
+  </style>
 </head>
 
 <body>
   <div class="sticky-top">
-  <header>
-    <p><i class="fas fa-envelope"></i> Vsa povpraševanja se pošljejo na naš e-mail: <a href="mailto:info@perosa.com">info@perosa.com</a></p>
-  </header>
+    <header>
+      <p><i class="fas fa-envelope"></i> Vsa povpraševanja se pošljejo na naš e-mail: <a href="mailto:info@perosa.com">info@perosa.com</a></p>
+    </header>
 
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Peroša</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Domov</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">O Nas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="products.html">Izdelki</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Kontakt</a>
-          </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Peroša</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Domov</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">O Nas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Izdelki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Kontakt</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-</div>
+    </nav>
+  </div>
 
   <main>
     <section class="hero d-flex align-items-center justify-content-center text-center" id="hero">
       <div class="hero-content" id="hero-content">
         <h1 class="display-4" id="hero-title">Kavna Storitev Gostinske Storitve in Dobava Kave</h1>
         <p class="lead" id="hero-subtitle">Najboljša kavna storitev v mestu. Ponujamo gostinske storitve in dobavo kave.</p>
-        <!-- <a href="#" class="btn btn-transparent btn-lg button-hero">Naročite zdaj</a> -->
         <button class="button-hero" id="scroll-to-categories">Preglej ponudbo</button>
       </div>
     </section>
 
+    <section class="about-us" id="about-us">
+      <div class="container">
+        <h5 class="about-title">Kavni Izdelki</h5>
+        <p>Podjetje Peroša je vodilno v zagotavljanju vrhunskih storitev in opreme za kavne aparate in gostinsko industrijo. Naš cilj je vaše zadovoljstvo in uspeh. Z več kot 20 leti izkušenj v industriji smo ponosni na kakovost naših izdelkov in storitev.</p>
+        <a href="about.html" class="btn btn-about">Več o nas</a>
+        <a href="contact.html" class="btn btn-secondary">Kontaktirajte nas</a>
+      </div>
+    </section>
+
     <section class="categories" id="categories">
-    <div class="container my-5">
-      <div class="row" id="categories">
-        <div class="col-md-12">
-          <div class="card coffee-card index-card">
-            <img src="images/skupaj-produkti/IMG_0169.jpg" alt="Coffee Products Image">
-            <div class="card-body">
-              <h5 class="card-title">Kavni Izdelki</h5>
-              <p class="card-text">Izberite med široko paleto kavnih izdelkov.</p>
-              <a href="coffee.html" class="btn btn-primary">Več informacij</a>
+      <div class="container my-5">
+        <div class="row" id="categories">
+          <div class="col-md-12">
+            <div class="card coffee-card index-card">
+              <img src="images/skupaj-produkti/IMG_0169.jpg" alt="Coffee Products Image">
+              <div class="card-body">
+                <h5 class="card-title">Kavni Izdelki</h5>
+                <p class="card-text">Izberite med široko paleto kavnih izdelkov.</p>
+                <a href="#coffee-products" class="btn btn-primary">Več informacij</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-12">
-          <div class="card machine-service-card index-card">
-            <img src="images/machine-card-img.jpg" alt="Coffee Machines Service Image">
-            <div class="card-body">
-              <h5 class="card-title">Servis Kavnih Aparatov</h5>
-              <p class="card-text">Profesionalni servis za vse vrste kavnih aparatov.</p>
-              <a href="servis.html" class="btn btn-primary">Več informacij</a>
+          <div class="col-md-12">
+            <div class="card machine-service-card index-card">
+              <img src="images/machine-card-img.jpg" alt="Coffee Machines Service Image">
+              <div class="card-body">
+                <h5 class="card-title">Servis Kavnih Aparatov</h5>
+                <p class="card-text">Profesionalni servis za vse vrste kavnih aparatov.</p>
+                <a href="servis.html" class="btn btn-primary">Več informacij</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-12">
-          <div class="card cleaning-products-card index-card">
-            <img src="images/cleaning-card-img.jpg" alt="Cleaning Products Image">
-            <div class="card-body">
-              <h5 class="card-title">Čistila</h5>
-              <p class="card-text">Najboljša čistila za vaše kavne aparate.</p>
-              <a href="cistila.html" class="btn btn-primary">Več informacij</a>
+          <div class="col-md-12">
+            <div class="card cleaning-products-card index-card">
+              <img src="images/cleaning-card-img.jpg" alt="Cleaning Products Image">
+              <div class="card-body">
+                <h5 class="card-title">Čistila</h5>
+                <p class="card-text">Najboljša čistila za vaše kavne aparate.</p>
+                <a href="cistila.html" class="btn btn-primary">Več informacij</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="product-showcases container my-5" id="coffee-products">
+      <div class="product-section">
+        <div class="text-center">
+          <h2>LUSSO KAVA V CELIH ZRNIH</h2>
+          <p class="description">Fine mešanice, pražene po italijanski tradiciji.</p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card minimalist-card">
+                <img src="images/kava-zrno/Kava-zrno.jpg" alt="Product Image" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Lusso Kava v Zrnih</h5>
+                  <p class="card-text">Fine mešanice, pražene po italijanski tradiciji.</p>
+                  <a href="kava.html" class="btn mt-4">Več informacij</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card minimalist-card">
+                <img src="images/kava-zrno/Kava-zrno2.jpg" alt="Product Image" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Lusso Espresso Caffe</h5>
+                  <p class="card-text">Mešanica Lusso Caffè je rezultat kombinacije edinstvenih in neponovljivih dejavnikov.</p>
+                  <a href="kava.html" class="btn">Več informacij</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-section">
+        <div class="text-center">
+          <h2>Cialde</h2>
+          <p class="description">Modra oz. Decaffeinato Mešanica Kave<br>Sladko, nežno in izjemno aromatična. Mešanica najbolj kakovostne kave</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="card minimalist-card">
+              <img src="images/cialde/IMG_0177.jpg" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Decaf Coffee Pods</h5>
+                <p class="card-text">Kava brez kofeina z bogatim okusom in aromo. Idealna za večerne ure.</p>
+                <a href="cialde.html" class="btn">Več informacij</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card minimalist-card">
+              <img src="images/cialde/IMG_0170.jpg" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Classic Coffee Pods</h5>
+                <p class="card-text">Tradicionalna kava z bogato aromo in okusom. Idealna za ljubitelje klasične kave.</p>
+                <a href="cialde.html" class="btn">Več informacij</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-section ">
+        <div class="text-center">
+          <h2>Porcelanske Skodelice</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="card minimalist-card minimalist-card-cups">
+              <img src="images/salce/IMG_0123.jpg" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Set Porcelanksih skodelic</h5>
+                <p class="card-text">Odkrijte čar naših skodelic za podaljšano, kapučino in espresso ter čaja.</p>
+                <a href="skodelice.html" class="btn">Več informacij</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="container my-5">
@@ -122,7 +292,6 @@
         </a>
       </div>
     </section>
-
   </main>
 
   <footer class="bg-dark text-white text-center py-4">
@@ -161,8 +330,7 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/4.5.2/js/bootstrap.min.js"></script>
   <script>
     document.getElementById('scroll-to-categories').addEventListener('click', function(event) {
       event.preventDefault();

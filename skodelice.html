@@ -3,18 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kavna Storitev - Cialde</title>
+  <title>Kavna Storitev - Porcelanske Skodelice</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/cialde.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .product-display img {
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      width: 100%;
+    }
+
+    .product-display img:hover {
+      transform: scale(1.05);
+    }
+
+    .product-display h3 {
+      color: #6f4e37;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-display .product-description {
+      color: #333;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .product-display .product-price {
+      color: #6f4e37;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-display .product-shipping {
+      color: #777;
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    .product-display {
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .product-display:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    #center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        object-position: center;
+        object-fit: cover;
+    }
+    #center2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        object-position: bottom;
+        object-fit: cover;
+    }
+  </style>
 </head>
 <body>
   <div class="sticky-top">
     <header>
       <p><i class="fas fa-envelope"></i> Vsa povpraševanja se pošljejo na naš e-mail: <a href="mailto:info@perosa.com">info@perosa.com</a></p>
     </header>
-  
+
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">Peroša</a>
@@ -44,58 +116,53 @@
 
   <main class="container my-5">
     <section class="hero">
-      <div class="hero-content">
-        <h1>Odkrijte Naše Kavne Cialde</h1>
-        <p>Enostavna in hitra priprava odlične kave</p>
-        <button href="#cialde-products" class="button-hero" id="scroll-to-products">Oglejte si izdelke</a>
+      <div class="hero-content text-center">
+        <h1>Odkrijte Naše Porcelanske Skodelice</h1>
+        <p>Elegantna in kvalitetna izbira za vaš popoln užitek ob kavi</p>
+        <button href="#cups-products" class="button-hero" id="scroll-to-products">Oglejte si izdelke</button>
       </div>
     </section>
 
-    <section id="cialde-products" class="my-5">
+    <section id="cups-products" class="my-5">
       <div class="text-center mb-5">
-        <h2 class="mb-4">Zakaj Izbrati Naše Kavne Cialde?</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="feature-box">
-              <i class="fas fa-coffee fa-3x mb-3 "></i>
-              <h4>Vrhunska Kakovost</h4>
-              <p>Naše cialde so narejene iz skrbno izbranih zrn arabice in robuste, kar zagotavlja izjemen okus in aromo.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="feature-box">
-              <i class="fas fa-clock fa-3x mb-3 "></i>
-              <h4>Hitra Priprava</h4>
-              <p>Cialde omogočajo enostavno in hitro pripravo kave, kar je idealno za hiter in brezskrben začetek dneva.</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="mb-4">Naše Porcelanske Skodelice</h2>
       </div>
 
-      <!-- Product Display -->
       <div class="row mb-5 align-items-center product-display">
         <div class="col-md-6 order-md-2">
-          <img src="images/cialde/IMG_0170.jpg" class="img-fluid" alt="Cialde Image 1">
+          <img src="images/salce/IMG_0123.jpg" class="img-fluid" alt="Set Porcelanskih Skodelic">
         </div>
         <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-content">
-          <h3 class="product-title">Cialde/podsi ESE Espresso</h3>
-          <p class="product-description">LUSSO caffè pods/cialda v papirnatem filtru, kremasta, polna in uravnotežena kava z okusom sveže pražene kave. Mešanica kave, sestavljena iz kakovostne arabice in robuste, zmešane z veliko pozornostjo, da se zagotovi ravnovesje in stabilnost okusa, zaradi česar je ta kava popolna pijača za ob vsakem odmoru dneva. Okusite lusso kavo za kavne avtomate v podsih/cialdah.</p>
-          <p class="product-price"><strong>150 Podsov/ciald: 27,40 € brez DDV</strong></p>
-          <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 450 kom znotraj SI</em></p>
+          <h3 class="product-title">Set Porcelanskih Skodelic</h3>
+          <p class="product-description">Elegantne porcelanske skodelice za popoln užitek ob kavi. Vsebujejo različne velikosti za espresso, cappuccino in latte.</p>
+          <p class="product-price"><strong>Set: 29,99 € brez DDV</strong></p>
+          <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p>
         </div>
       </div>
 
       <div class="row mb-5 align-items-center product-display">
         <div class="col-md-6">
-          <img src="images/cialde/IMG_0176.jpg" class="img-fluid" alt="Cialde Image 2">
+          <img src="images/salce/IMG_0151(1).jpg" class="img-fluid" id="center" alt="Steklena Espresso Skodelica">
         </div>
         <div class="col-md-6 d-flex flex-column justify-content-center text-content">
-          <h3 class="product-title">Cialde/podsi ESE Brezkofeinska/DECAFFE</h3>
-          <p class="product-description">Brezkofeinska kava LUSSO v papirnatem filtru, je kakovostna, kremasta in polnega telesa s popolno uravnoteženim okusom ter jantarne barve. Uživajte v kavi, DECAFFE v baru, doma ali v pisarni.</p>
-          <p class="product-price"><strong>50 Podsov/ciald: 18,27 € brez DDV</strong></p>
-          <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 450 kom znotraj SI</em></p>
+          <h3 class="product-title">Steklena Espresso Skodelica</h3>
+          <p class="product-description">Čudovita steklena skodelica za vaš najljubši espresso. Narejena iz visoko kakovostnega stekla, ki ohranja toploto kave.</p>
+          <p class="product-price"><strong>1 Kos: 9,99 € brez DDV</strong></p>
+          <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p>
         </div>
       </div>
+
+<div class="row mb-5 align-items-center product-display">
+    <div class="col-md-6 order-md-2">
+      <img src="images/salce/IMG_0147(1).jpg" class="img-fluid" id="center2" alt="Set Porcelanskih Skodelic">
+    </div>
+    <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-content">
+      <h3 class="product-title">Set Porcelanskih Skodelic</h3>
+      <p class="product-description">Elegantne porcelanske skodelice za popoln užitek ob kavi. Vsebujejo različne velikosti za espresso, cappuccino in latte.</p>
+      <p class="product-price"><strong>Set: 29,99 € brez DDV</strong></p>
+      <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p>
+    </div>
+  </div>
     </section>
   </main>
 
@@ -141,11 +208,10 @@
   <script>
     document.getElementById('scroll-to-products').addEventListener('click', function(event) {
       event.preventDefault();
-      document.querySelector('#cialde-products').scrollIntoView({
+      document.querySelector('#cups-products').scrollIntoView({
         behavior: 'smooth'
       });
     });
   </script>
-  
 </body>
 </html>

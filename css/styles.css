@@ -324,7 +324,6 @@ header a:hover {
   width: 50%;
 }
 
-/* Cleaning Products Card Styles (Image Right) */
 .cleaning-products-card {
   background-color: #e0f7fa;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -364,12 +363,14 @@ header a:hover {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .about-subtitle {
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: #6f4e37;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .feature-box,
@@ -378,7 +379,7 @@ header a:hover {
   transition: transform 0.3s, box-shadow 0.3s;
   padding: 1.5rem;
   background-color: var(--light-color);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   min-height: 170px;
 }
 
@@ -402,8 +403,8 @@ header a:hover {
 }
 
 .feature-icon:hover {
-  color: var(--dark-color)
-    /* Darker shade on hover */
+  color: var(--dark-color);
+  /* Darker shade on hover */
 }
 
 .feature-content p,
@@ -413,7 +414,8 @@ header a:hover {
 
 .feature-title,
 .service-title {
-  color: var(#6f4e37);
+  color: #6f4e37;
+  font-weight: 600;
 }
 
 .feature-box p,
@@ -423,7 +425,7 @@ header a:hover {
 
 .about-contact-title {
   font-weight: 600;
-  color: var(#6f4e37);
+  color: #6f4e37;
 }
 
 .about-email {
@@ -433,8 +435,8 @@ header a:hover {
 .about-email:hover {
   text-decoration: underline;
   color: var(--primary-color);
-
 }
+
 
 /* Contact Section Styles */
 .contact {
