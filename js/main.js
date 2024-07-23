@@ -50,3 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+var today = new Date();
+    var year = today.getFullYear();
+    console.log(year);
+    document.querySelector(".footer-credits").innerHTML = "&copy; " + year + " Peroša. Vse pravice pridražane."; 
+  

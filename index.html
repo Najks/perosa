@@ -4,16 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kavna Storitev</title>
+  <meta name="description" content="">
+  <title>Peroša - Prodaja kave Maribor, Kava Lusso, Servis Gostinskih aparatov in Čistil</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <style>
-  .btn-about {
+    .minimalist-card img {
+      width: 100%;
+      max-height: fit-content;
+    }
+    
+    .Logo-image {
+      width: 100px;
+      margin-right: 100px;
+    }
+
+    .btn-about {
       background-color: #6f4e37;
       color: #fff;
     }
+
     .product-section {
       padding: 30px 0;
       border-bottom: 1px solid #ddd;
@@ -52,7 +64,7 @@
     }
 
     .minimalist-card .card-body {
-      height: 200px;
+      height: auto;
       text-align: center;
     }
 
@@ -92,6 +104,7 @@
     .about-us .btn {
       margin: 0 10px;
     }
+
   </style>
 </head>
 
@@ -102,10 +115,11 @@
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Peroša</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-          aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="index.html">
+        <img class="Logo-image" src="images/Logo-perosa.png" alt="Peroša Lusso kava Maribor">
+      </a>
+      <div class="container jusify-content-center">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -121,6 +135,24 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Kontakt</a>
+            </li>
+            <li class="nav-item">
+              <a href="kava.html" class="nav-link">KAVA</a>
+            </li>
+            <li class="nav-item">
+              <a href="skodelice.html" class="nav-link">SKODELICE</a>
+            </li>
+            <li class="nav-item">
+              <a href="cialde.html" class="nav-link">CIALDE</a>
+            </li>
+            <li class="nav-item">
+              <a href="servis.html" class="nav-link">SERVIS</a>
+            </li>
+            <li class="nav-item">
+              <a href="cistila.html" class="nav-link">CISTILA</a>
+            </li>
+            <li class="nav-item">
+              <a href="prodaja.html" class="nav-link">GOSTINSKI APARATI</a>
             </li>
           </ul>
         </div>
@@ -148,7 +180,7 @@
 
     <section class="categories" id="categories">
       <div class="container my-5">
-        <div class="row" id="categories">
+        <div class="row">
           <div class="col-md-12">
             <div class="card coffee-card index-card">
               <img src="images/skupaj-produkti/IMG_0169.jpg" alt="Coffee Products Image">
@@ -161,10 +193,10 @@
           </div>
           <div class="col-md-12">
             <div class="card machine-service-card index-card">
-              <img src="images/machine-card-img.jpg" alt="Coffee Machines Service Image">
+              <img src="images/slika-index.jpg" alt="Coffee Machines Service Image">
               <div class="card-body">
-                <h5 class="card-title">Servis Kavnih Aparatov</h5>
-                <p class="card-text">Profesionalni servis za vse vrste kavnih aparatov.</p>
+                <h5 class="card-title">Servis Gostinske Opreme</h5>
+                <p class="card-text">Profesionalni servis za vse vrste kavnih aparatov, ledomatov in pomivalnih strojev.</p>
                 <a href="servis.html" class="btn btn-primary">Več informacij</a>
               </div>
             </div>
@@ -201,23 +233,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="card minimalist-card">
-                <img src="images/kava-zrno/Kava-zrno2.jpg" alt="Product Image" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">Lusso Espresso Caffe</h5>
-                  <p class="card-text">Mešanica Lusso Caffè je rezultat kombinacije edinstvenih in neponovljivih dejavnikov.</p>
-                  <a href="kava.html" class="btn">Več informacij</a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
       <div class="product-section">
         <div class="text-center">
           <h2>Cialde</h2>
-          <p class="description">Modra oz. Decaffeinato Mešanica Kave<br>Sladko, nežno in izjemno aromatična. Mešanica najbolj kakovostne kave</p>
+          <p class="description">Brezkofeinska Mešanica Kave<br>Sladko, nežno in izjemno aromatična. Mešanica najbolj kakovostne kave</p>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4">
@@ -226,7 +248,7 @@
               <div class="card-body">
                 <h5 class="card-title">Decaf Coffee Pods</h5>
                 <p class="card-text">Kava brez kofeina z bogatim okusom in aromo. Idealna za večerne ure.</p>
-                <a href="cialde.html" class="btn">Več informacij</a>
+                <a href="cialde.html" class="btn mt-4">Več informacij</a>
               </div>
             </div>
           </div>
@@ -236,7 +258,7 @@
               <div class="card-body">
                 <h5 class="card-title">Classic Coffee Pods</h5>
                 <p class="card-text">Tradicionalna kava z bogato aromo in okusom. Idealna za ljubitelje klasične kave.</p>
-                <a href="cialde.html" class="btn">Več informacij</a>
+                <a href="cialde.html" class="btn mt-4">Več informacij</a>
               </div>
             </div>
           </div>
@@ -251,9 +273,9 @@
             <div class="card minimalist-card minimalist-card-cups">
               <img src="images/salce/IMG_0123.jpg" alt="Product Image" class="card-img-top">
               <div class="card-body">
-                <h5 class="card-title">Set Porcelanksih skodelic</h5>
+                <h5 class="card-title">Set Porcelanskih Skodelic</h5>
                 <p class="card-text">Odkrijte čar naših skodelic za podaljšano, kapučino in espresso ter čaja.</p>
-                <a href="skodelice.html" class="btn">Več informacij</a>
+                <a href="skodelice.html" class="btn mt-4">Več informacij</a>
               </div>
             </div>
           </div>
@@ -324,13 +346,15 @@
         </div>
       </div>
     </div>
-    <p class="mt-3 footer-credits">&copy; 2024 Peroša. Vse pravice pridržane.</p>
+    <!-- <p class="mt-3 footer-credits">&copy; 2024 Peroša. Vse pravice pridržane.</p> Generated by JS now -->
+     <p class="mt-3 footer-credits">Test test</p>
     <a href="splosni-pogoji.html" class="footer-a">Pogoji poslovanja</a>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
   <script>
     document.getElementById('scroll-to-categories').addEventListener('click', function(event) {
       event.preventDefault();
@@ -342,7 +366,7 @@
         behavior: 'smooth'
       });
     });
-  </script>
+</script>
 </body>
 
 </html>
