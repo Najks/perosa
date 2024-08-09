@@ -184,6 +184,12 @@ header p {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .Logo-image {
   width: 100px;
 }
@@ -203,8 +209,13 @@ header p {
   margin: 0 0.5rem;
   transition: color 0.3s ease;
   text-wrap: nowrap;
+  white-space: nowrap;
 }
 
+.nav-item{
+  flex: 1 1 auto;
+  margin: 0.5rem;
+}
 
 .navbar-dark .navbar-nav .nav-link.active {
   color: #fff;
@@ -219,7 +230,12 @@ header a {
 header a:hover {
   text-decoration: underline;
   color: #1c1c1c;
+}
 
+@media (max-width: 992px) {
+  .navbar-nav {
+    justify-content: flex-start;
+  }
 }
 
 .index-card {

@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
   const backgrounds = [
     {
-      image: 'images/hero.jpg',
-      title: 'Kavna Storitev Gostinske Storitve in Dobava Kave',
-      subtitle: 'Najboljša kavna storitev v mestu. Ponujamo gostinske storitve in dobavo kave.'
+      image: '/perosa/images/skupaj-produkti/IMG_0154.jpg',
+      title: 'LUSSO caffè',
+      subtitle: ' Naša blagovna znamka s preverjeno tradicijo prave Italjanske kave.'
     },
     {
-      image: 'images/hero2.jpg',
-      title: 'Najbolj Kvalitetna Kava',
+      image: '/perosa/images/salce/IMG_0105.jpg',
+      title: 'Naj kvalitetnejše vrste surove zelene kave',
       subtitle: 'Izberite med široko paleto kavnih zrn najvišje kvalitete.'
     },
     {
       image: '/perosa/images/skupaj-produkti/IMG_0169.jpg',
-      title: 'Sveža in Okusna Kava',
-      subtitle: 'Okusite svežino in aromo vsake skodelice kave, ki jo pripravimo za vas.'
+      title: 'LUSSO caffè',
+      subtitle: 'Za vas v majhnih količinah sveže praži naš mojster praženja.'
     }
   ];
 
@@ -55,4 +55,3 @@ var today = new Date();
     var year = today.getFullYear();
     console.log(year);
     document.querySelector(".footer-credits").innerHTML = "&copy; " + year + " Peroša. Vse pravice pridražane."; 
-  
