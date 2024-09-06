@@ -43,17 +43,16 @@ h5,
 h6 {
   font-family: 'Merriweather', serif;
 }
-
+/* Hero Section Styling */
 .hero {
-  background: url('/perosa/images/skupaj-produkti/IMG_0169.jpg') no-repeat center center/cover;
-  height: 90svh;
-  color: #fff;
+  background: url('../tina-guina-obV_LM0KjxY-unsplash.jpg') no-repeat center center/cover;
+  height: 90vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #ffffff; /* Belo besedilo */
   text-align: center;
-  position: relative;
-  object-position: bottom;
 }
 
 .hero::before {
@@ -63,65 +62,43 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  object-position: bottom;
-}
-
-.hero-content {
-  position: relative;
+  background: rgba(0, 0, 0, 0.6); /* Temnejši prekrivni sloj */
   z-index: 1;
 }
 
+.hero-content {
+  z-index: 2;
+}
+
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
+  letter-spacing: 1px;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 1.5rem;
-}
-
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 }
 
 .button-hero {
   background: transparent;
-  border: 2px solid var(--light-color);
-  color: var(--light-color);
-  box-shadow: none;
+  border: 2px solid #d4af37; /* Zlata obroba */
+  color: #d4af37; /* Zlata barva za tekst */
   padding: 0.75rem 2rem;
+  font-size: 1.2rem;
   border-radius: 5px;
-  font-size: large;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button-hero:hover {
-  transition: all 0.3s ease-in;
-  background: var(--light-color);
-  color: var(--primary-color);
-  border: 2px solid var(--light-color);
-  box-shadow: none;
+  background-color: #d4af37;
+  color: #2c2c2c; /* Temno siva ob lebdenju */
 }
 
-.button-hero:active {
-  transition: all 0.3s ease-in;
-  background: var(--background-color);
-  color: var(--primary-color);
-  box-shadow: none;
-}
-
-.button-hero::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background: var(--light-color);
-  transition: width 0.3s;
-  box-shadow: none;
-}
 
 .carousel-item {
   transition: transform 0.6s ease, opacity 0.6s ease;
@@ -163,73 +140,88 @@ h6 {
   width: 3%;
 }
 
+/* Navbar Styling */
+.navbar {
+  background-color: #2c2c2c; /* Temno siva */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 30px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand img {
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.nav-link {
+  color: #b3b3b3 !important; /* Svetlo siva barva za povezave */
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d4af37 !important; /* Zlata barva ob lebdenju */
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #d4af37; /* Zlata barva za aktivne povezave */
+  text-decoration: underline;
+}
+
+.dropdown-menu {
+  background-color: #2c2c2c;
+  border: none;
+}
+
+.dropdown-item {
+  color: #b3b3b3;
+}
+
+.dropdown-item:hover {
+  color: #d4af37;
+  background-color: transparent;
+}
+
+.dropdown-divider {
+  border-color: #555;
+}
+
+/* Header Styling */
 header {
-  background: linear-gradient(90deg, #ffffff, #afafaf);
+  background: linear-gradient(90deg, #2c2c2c, #4d4d4d);
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
 }
 
 header p {
-  padding: 5px;
-  color: #1c1c1c;
+  color: #f0f0f0;
   margin: 0;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.navbar {
-  /* background: linear-gradient(90deg, #6f4e37, #1c1c1c); */
-  background: #0b0b0b;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.Logo-image {
-  width: 100px;
-}
-
-.navbar-brand {
-  /* color: #f8f9fa !important;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase; */
-  margin-bottom: 6px;
-}
-
-.navbar-nav .nav-link {
-  color: #fff !important;
-  text-transform: uppercase;
-  font-size: 0.95rem;
-  margin: 0 0.5rem;
-  transition: color 0.3s ease;
-  text-wrap: nowrap;
-  white-space: nowrap;
-}
-
-.nav-item{
-  flex: 1 1 auto;
-  margin: 0.5rem;
-}
-
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #fff;
-  text-decoration: underline;
-}
-
 header a {
   text-decoration: none;
-  color: #1c1c1c;
+  color: #d4af37; /* Zlata barva za povezave */
+  margin-left: 10px;
 }
 
 header a:hover {
   text-decoration: underline;
-  color: #1c1c1c;
+  color: #ffffff;
 }
 
 @media (max-width: 992px) {
@@ -470,7 +462,7 @@ header a:hover {
 }
 
 .contact h2 {
-  color: var(#6f4e37);
+  color: var(#d4af37);
   margin-bottom: 1rem;
 }
 
@@ -840,7 +832,7 @@ footer {
 }
 
 footer .footer-title {
-  color: #6f4e37;
+  color: #d4af37;
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -863,7 +855,7 @@ footer .footer-link {
 
 footer .footer-link:hover {
   color: #343a40;
-  background-color: #6f4e37;
+  background-color: #d4af37;
   padding-left: 0.5rem;
   border-radius: 5px;
 }
@@ -876,7 +868,7 @@ footer .footer-link-mail {
 }
 
 footer .footer-link-mail:hover {
-  color: #6f4e37;
+  color: #d4af37;
 }
 
 footer .contact-info p,
@@ -885,7 +877,7 @@ footer .contact-info a {
 }
 
 footer .contact-info i {
-  color: #6f4e37;
+  color: #d4af37;
   margin-right: 0.5rem;
 }
 
@@ -897,7 +889,7 @@ footer .social-icons a {
 }
 
 footer .social-icons a:hover {
-  color: #6f4e37;
+  color: #d4af37;
 }
 
 footer p {
@@ -905,7 +897,7 @@ footer p {
 }
 
 .footer-credits {
-  border-top: 1px solid #6f4e37;
+  border-top: 1px solid #d4af37;
   padding-top: 1rem;
   margin-top: 1rem;
   font-size: 0.9rem;
