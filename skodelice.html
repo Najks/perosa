@@ -21,7 +21,7 @@
     }
 
     .product-display h3 {
-      color: #6f4e37;
+      color: #d4af37;
       font-weight: 700;
       font-size: 1.5rem;
       margin-top: 1rem;
@@ -36,7 +36,7 @@
     }
 
     .product-display .product-price {
-      color: #6f4e37;
+      color: #d4af37;
       font-weight: 700;
       font-size: 1.2rem;
       margin-top: 1rem;
@@ -80,33 +80,52 @@
         object-fit: cover;
     }
 
-    .styled-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 3rem;
-    }
+    .hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-    .styled-section h2 {
-      margin-right: 2rem;
-      font-size: 2rem;
-      color: #6f4e37;
-    }
+.hero-content {
+  padding: 2rem;
+}
 
-    .styled-section img {
-      max-width: 40%;
-      height: auto;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem; /* Manjši razmik pod naslovom */
+  color: #2b2d42;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  line-height: 1.4; /* Manjša višina vrstice za gostejše besedilo */
+  max-width: 60%;
+  margin: 0 auto;
+  color: #333;
+  margin-bottom: 1rem; /* Dodan razmik spodaj za ločitev od drugih elementov */
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+    line-height: 1.4; /* Uporabi enako gostoto vrstice tudi na manjših zaslonih */
+  }
+}
+
   </style>
 </head>
 <body>
   <div class="sticky-top">
     <header>
-      <p>Najboljša kavna storitev v Mariboru | <a href="#">Pokliči nas: +386 40 123 456</a></p>
-    </header>
+      <p>
+        Želite oddati naročilo? <strong>Pišite nam</strong> |
+        <a href="mailto:perosa@mail.com">perosa@mail.com <i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </p>    </header>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -163,11 +182,14 @@
     </section>
   -->
 
-    <section id="cups-products" class="my-5">
-      <div class="styled-section">
-        <h2>Naše Porcelanske Skodelice</h2>
-        <img src="cups-perosa.jpg" class="img-fluid" alt="Set Porcelanskih Skodelic">
-      </div>
+  <section id="cups-hero" class="hero-section">
+    <div class="hero-content">
+      <h1>Naše Porcelanske Skodelice</h1>
+      <p>Oko z vami ne samo da je, ampak tudi pije. Užitek v ujemajoči se posodi v dizajnu LUSSO caffè je preprosto del tega.</p>
+    </div>
+  </section>
+  
+  
 
       <div class="row mb-5 align-items-center product-display">
         <div class="col-md-6 order-md-2">
@@ -176,8 +198,8 @@
         <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-content">
           <h3 class="product-title">Set Porcelanskih Skodelic</h3>
           <p class="product-description">Elegantne porcelanske skodelice za popoln užitek ob kavi. Vsebujejo različne velikosti za espresso, cappuccino in latte.</p>
-          <p class="product-price"><strong>Set: 29,99 € brez DDV</strong></p>
-          <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p>
+          <!--<p class="product-price"><strong>Set: 29,99 € brez DDV</strong></p>
+          <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p>-->
         </div>
       </div>
 
@@ -188,8 +210,8 @@
         <div class="col-md-6 d-flex flex-column justify-content-center text-content">
           <h3 class="product-title">Steklena Espresso Skodelica</h3>
           <p class="product-description">Čudovita steklena skodelica za vaš najljubši espresso. Narejena iz visoko kakovostnega stekla, ki ohranja toploto kave.</p>
-          <p class="product-price"><strong>1 Kos: 9,99 € brez DDV</strong></p>
-          <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p>
+          <!--<p class="product-price"><strong>1 Kos: 9,99 € brez DDV</strong></p>
+          <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p>-->
         </div>
       </div>
 
@@ -198,10 +220,10 @@
           <img src="images/salce/IMG_0147(1).jpg" class="img-fluid" id="center2" alt="Set Porcelanskih Skodelic">
         </div>
         <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-content">
-          <h3 class="product-title">Set Porcelanskih Skodelic</h3>
-          <p class="product-description">Elegantne porcelanske skodelice za popoln užitek ob kavi. Vsebujejo različne velikosti za espresso, cappuccino in latte.</p>
-          <p class="product-price"><strong>Set: 29,99 € brez DDV</strong></p>
-          <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p>
+          <h3 class="product-title">Porcelanska skodelica</h3>
+          <p class="product-description">Elegantne porcelanska skodelice temne barve.</p>
+          <!--<p class="product-price"><strong>Set: 29,99 € brez DDV</strong></p>
+          <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p>-->
         </div>
       </div>
     </section>

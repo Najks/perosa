@@ -7,48 +7,6 @@ section {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hero Section */
-.hero {
-  background: url('../images/cialde/IMG_0177.jpg') no-repeat center center/cover;
-  height: 90vh;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 900;
-  margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
 /* Feature Section */
 .feature-box {
   padding: 1.5rem;
@@ -57,6 +15,7 @@ section {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
   text-align: center;
+  max-height: 320px;
 }
 
 .feature-box i {
@@ -102,6 +61,10 @@ section {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start */
 }
 
 #cialde-products .product-display:hover {
@@ -125,7 +88,6 @@ section {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
-
 #cialde-products .product-display h3 {
   color: var(--primary-color);
   font-weight: 700;
@@ -142,7 +104,7 @@ section {
 }
 
 #cialde-products .product-display .product-price {
-  color: #6f4e37;
+  color: #d4af37;
   font-weight: 700;
   font-size: 1.2rem;
   margin-top: 1rem;
@@ -159,4 +121,73 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.align-left {
+  justify-content: flex-start; /* Align items to the left */
+}
+
+.align-right {
+  justify-content: flex-end; /* Align items to the right */
+}
+
+.text-left {
+  text-align: left;
+}
+
+.product-display {
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.product-display .col-md-6 {
+  display: flex;
+  align-items: center;
+}
+
+.product-display .text-left {
+  text-align: left;
+}
+
+.product-description {
+  color: var(--text-color);
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 576px) {
+  .product-display img {
+    height: auto; /* Allow image height to adjust automatically */
+  }
+
+  .product-title {
+    font-size: 1.25rem; /* Adjust title font size for smaller screens */
+  }
+
+  .product-description {
+    font-size: 1rem; /* Adjust description font size for smaller screens */
+  }
+
+  .row {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  .product-display {
+    flex-direction: column; /* Stack items vertically in the product display */
+    text-align: center; /* Center text on small screens */
+  }
+
+  .product-display .text-left,
+  .product-display .text-right {
+    text-align: center; /* Center text alignment for both left and right on small screens */
+  }
 }

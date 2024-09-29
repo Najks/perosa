@@ -6,14 +6,16 @@
   <title>Kontaktirajte Nas - Kavna Storitev</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="sticky-top">
     <header>
-      <p>Najboljša kavna storitev v Mariboru | <a href="#">Pokliči nas: +386 40 123 456</a></p>
-    </header>
+      <p>
+        Želite oddati naročilo? <strong>Pišite nam</strong> |
+        <a href="mailto:perosa@mail.com">perosa@mail.com <i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </p>    </header>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -28,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-links" href="index.html">Domov</a>
+              <a class="nav-link" href="index.html">Domov</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">O Nas</a>
@@ -88,6 +90,15 @@
                   <span class="input-group-text"><i class="fas fa-user"></i></span>
                 </div>
                 <input type="text" id="name" name="name" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">Zadeva</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                </div>
+                <input type="text" id="zadeva" name="zadeva" class="form-control" required>
               </div>
             </div>
             <div class="form-group">

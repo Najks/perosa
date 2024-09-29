@@ -9,14 +9,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      color: #333;
-      background-color: #f7f7f7;
-      margin: 0;
-      padding: 0;
-    }
-
     h1, h2 {
       color: #2c2c2c;
     }
@@ -29,7 +21,6 @@
       display: inline-block;
       vertical-align: middle;
       animation: fadeIn 2s ease-in-out;
-      transform-origin: center;
     }
 
     h2 {
@@ -53,58 +44,6 @@
       justify-content: center;
       align-items: center;
       margin-bottom: 2rem;
-      animation: slideInBoth 1s ease-out;
-    }
-
-    .svg-container {
-      margin-right: 15px;
-      animation: scaleUp 1.5s ease-in-out forwards;
-    }
-
-    .svg-container img {
-      width: 120px;
-      height: 120px;
-      animation: moveAndScale 1.5s ease-in-out;
-    }
-
-    @keyframes slideInBoth {
-      from {
-        transform: translateX(-100px);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes scaleUp {
-      0% {
-        transform: scale(0.5);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    @keyframes moveAndScale {
-      0% {
-        transform: translateY(-20px) scale(0.8);
-      }
-      100% {
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.8);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
     }
 
     .card {
@@ -124,6 +63,9 @@
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
       transition: transform 0.3s ease-in-out;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
 
     .card img:hover {
@@ -168,39 +110,56 @@
       color: #2c2c2c;
     }
 
-    footer {
-      background-color: #2c2c2c;
-      color: #fff;
-      padding-top: 20px;
-      padding-bottom: 20px;
+    /* Medijske poizvedbe */
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .section-title {
+        font-size: 1.25rem;
+      }
+
+      .card-body {
+        padding: 10px;
+      }
+
+      .btn-card {
+        padding: 6px 14px;
+        font-size: 0.875rem;
+      }
+
+      .header-container {
+        margin-bottom: 1rem;
+      }
     }
 
-    .footer-title {
-      font-size: 1.25rem;
-      margin-bottom: 15px;
-    }
+    @media (max-width: 575px) {
+      .card img {
+        max-width: 100%;
+        height: auto;
+      }
 
-    .footer-links a {
-      color: #ccc;
-      text-decoration: none;
-      transition: color 0.3s ease-in-out;
-    }
+      .card {
+        margin-bottom: 1.5rem;
+      }
 
-    .footer-links a:hover {
-      color: #fff;
-    }
+      .card-title {
+        font-size: 1rem;
+      }
 
-    .contact-info p {
-      margin-bottom: 5px;
-    }
+      .btn-card {
+        padding: 5px 12px;
+        font-size: 0.75rem;
+      }
 
-    .social-icons a {
-      color: #ccc;
-      transition: color 0.3s ease-in-out;
-    }
-
-    .social-icons a:hover {
-      color: #fff;
+      .card-text {
+        font-size: 0.875rem;
+      }
     }
   </style>
 </head>
@@ -208,7 +167,10 @@
 <body>
   <div class="sticky-top">
     <header>
-      <p>Najboljša kavna storitev v Mariboru | <a href="#">Pokliči nas: +386 40 123 456</a></p>
+      <p>
+        Želite oddati naročilo? <strong>Pišite nam</strong> |
+        <a href="mailto:perosa@mail.com">perosa@mail.com <i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </p>
     </header>
 
     <!-- Navbar -->
@@ -223,33 +185,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Domov</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">O Nas</a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Izdelki
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="kava.html">Kava</a>
-                <a class="dropdown-item" href="cialde.html">Cialde</a>
-                <a class="dropdown-item" href="cistila.html">Čistila</a>
-                <a class="dropdown-item" href="skodelice.html">Skodelice</a>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Kontakt</a>
-            </li>
-            <li class="nav-item"><a href="servis.html" class="nav-link">Servis</a>
-            </li>
-            <li class="nav-item"><a href="produkti.html" class="nav-link">Gostinska oprema</a>
-            </li>
+            <!-- Navigacija -->
           </ul>
         </div>
       </div>
@@ -258,186 +194,38 @@
 
   <main class="container my-5">
     <div class="header-container">
-      <div class="svg-container">
-        <img src="svg/undraw_empty_cart_co35.svg" alt="Empty Cart" style="width: 120px; height: 120px;">
-      </div>
-      <h1>Ostali Produkti</h1>
+      <h1>Odkrijte Izbiro Gostinske Opreme</h1>
     </div>
 
-    <!-- Gostinska oprema Section -->
+    <!-- Primer sekcij -->
     <section>
-      <h2 class="section-title">Gostinska oprema</h2>
+      <h2 class="section-title">Mlin - Remidag</h2>
       <div class="card">
         <div class="row no-gutters align-items-center">
           <div class="col-md-4">
-            <img src="images/gostinska-oprema.jpg" alt="Gostinska oprema" class="img-fluid">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h3 class="card-title">Gostinska Oprema</h3>
-              <p class="card-text">Izberite najboljšo gostinsko opremo, ki bo ustrezala vašim potrebam. Oglejte si našo ponudbo na spletni strani proizvajalca.</p>
-              <a href="https://example.com/gostinska-oprema" class="btn btn-card" target="_blank">Pojdi na spletno stran</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mlin – Remidag Section -->
-    <section>
-      <h2 class="section-title">Mlin – Remidag</h2>
-      <div class="card">
-        <div class="row no-gutters align-items-center">
-          <div class="col-md-4">
-            <img src="images/remidag.jpg" alt="Mlin Remidag" class="img-fluid">
+            <img src="mlincki.png" alt="Mlin Remidag" class="img-fluid max-width-90">
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <h3 class="card-title">Mlin Remidag</h3>
-              <p class="card-text">Remidag je vodilni proizvajalec mlinov za kavo, ki zagotavljajo enakomerno in natančno mletje. Oglejte si več na njihovi spletni strani.</p>
+              <p class="card-text">Remidag je vodilni proizvajalec mlinov za kavo.</p>
               <a href="https://example.com/remidag" class="btn btn-card" target="_blank">Pojdi na spletno stran</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Kavni avtomati - Futura Section -->
-    <section>
-      <h2 class="section-title">Kavni avtomati - Futura</h2>
-      <div class="card">
-        <div class="row no-gutters align-items-center">
-          <div class="col-md-4">
-            <img src="images/futura.jpg" alt="Kavni avtomati Futura" class="img-fluid">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h3 class="card-title">Kavni Avtomati Futura</h3>
-              <p class="card-text">Futura kavni avtomati so znani po svoji zanesljivosti in enostavni uporabi. Preverite njihovo ponudbo na spletni strani.</p>
-              <a href="https://example.com/futura" class="btn btn-card" target="_blank">Pojdi na spletno stran</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pomivalni Stroji Section -->
-    <section>
-      <h2 class="section-title">Pomivalni Stroji</h2>
-      <div class="card">
-        <div class="row no-gutters align-items-center">
-          <div class="col-md-4">
-            <img src="images/pomivalni-stroji.jpg" alt="Pomivalni Stroji" class="img-fluid">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h3 class="card-title">Pomivalni Stroji</h3>
-              <p class="card-text">Profesionalni pomivalni stroji za gostinsko uporabo. Več informacij o teh izdelkih najdete na spletni strani proizvajalca.</p>
-              <a href="https://example.com/pomivalni-stroji" class="btn btn-card" target="_blank">Pojdi na spletno stran</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ledomati Section -->
-    <section>
-      <h2 class="section-title">Ledomati</h2>
-      <div class="card">
-        <div class="row no-gutters align-items-center">
-          <div class="col-md-4">
-            <img src="images/ledomati.jpg" alt="Ledomati" class="img-fluid">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h3 class="card-title">Ledomati</h3>
-              <p class="card-text">Ledomati so ključni za vsako gostinsko opremo. Oglejte si E 21 nano na spletni strani proizvajalca.</p>
-              <a href="https://example.com/ledomati-e21" class="btn btn-card" target="_blank">Pojdi na spletno stran</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Servis Gostinske Opreme Section -->
-    <section>
-      <h2 class="section-title">Servis Gostinske Opreme</h2>
-      <div class="card">
-        <div class="row no-gutters align-items-center">
-          <div class="col-md-4">
-            <img src="images/servis-gostinske-opreme.jpg" alt="Servis Gostinske Opreme" class="img-fluid">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h3 class="card-title">Servis Gostinske Opreme</h3>
-              <p class="card-text">Za servis gostinske opreme se obrnite na nas. Več informacij najdete na naši spletni strani.</p>
-              <a href="mailto:info@perosa.com" class="btn btn-card">Kontaktirajte nas</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Rezervni Deli Section -->
-    <section>
-      <h2 class="section-title">Rezervni Deli</h2>
-      <div class="card">
-        <div class="row no-gutters align-items-center">
-          <div class="col-md-4">
-            <img src="images/rezervni-deli.jpg" alt="Rezervni Deli" class="img-fluid">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h3 class="card-title">Rezervni Deli</h3>
-              <p class="card-text">Potrebujete rezervne dele? Na voljo imamo širok spekter delov za različne gostinske naprave.</p>
-              <a href="https://example.com/rezervni-deli" class="btn btn-card" target="_blank">Pojdi na spletno stran</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <footer class="bg-dark text-white text-center py-4">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-left">
-          <h4 class="footer-title">Hitre Povezave</h4>
-          <ul class="footer-links">
-            <li><a href="index.html" class="footer-link">Domov</a></li>
-            <li><a href="about.html" class="footer-link">O Nas</a></li>
-            <li><a href="products.html" class="footer-link">Izdelki</a></li>
-            <li><a href="cialde.html" class="footer-link">Cialde</a></li>
-            <li><a href="contact.html" class="footer-link">Kontakt</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 text-left contact-info">
-          <h4 class="footer-title about-contact-title">Kontaktirajte Nas</h4>
-          <p><i class="fas fa-map-marker-alt mr-2"></i>Pavel Peroša s.p., Vršnik 5, 2201 Zgornja Kungota, Slovenija</p>
-          <p><i class="fas fa-phone-alt mr-2"></i>Telefonska številka: +386 40 568 073</p>
-          <p><i class="fas fa-envelope mr-2"></i>E-pošta: <a href="mailto:pavelperosa@gmail.com" class="footer-link-mail">pavelperosa@gmail.com</a></p>
-        </div>
-      </div>
-      <div class="row mt-3">
-        <div class="col-md-12 text-center">
-          <div class="social-icons">
-            <a href="#" class="mr-3"><i class="fab fa-facebook fa-2x"></i></a>
-            <a href="#" class="mr-3"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-          </div>
-        </div>
-      </div>
+      <!-- Vsebina footerja -->
     </div>
-    <p class="mt-3 footer-credits">&copy; 2024 Peroša. Vse pravice pridržane.</p>
-    <a href="splosni-pogoji.html" class="footer-a">Pogoji poslovanja</a>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
 </body>
 
 </html>

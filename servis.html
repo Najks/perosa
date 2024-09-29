@@ -6,71 +6,188 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/styles.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Servis Section */
+        section {
+            padding: 30px 15px;
+        }
+
+        h1.display-4 {
+            color: #d4af37; /* Zlata barva za glavni naslov */
+            margin-bottom: 20px; /* Razmik spodaj */
+            transition: color 0.3s ease; /* Prehod za animacijo barve */
+        }
+
+        h1.display-4:hover {
+            color: #b89a2f; /* Temnejša zlata ob hoverju */
+        }
+
+        p.lead {
+            font-size: 1.25rem;
+            color: #333; /* Temno siva barva za podnaslov */
+            margin-bottom: 30px; /* Razmik spodaj */
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* Rahlo zaobljeni robovi slik */
+            transition: transform 0.3s ease; /* Prehod za animacijo slike */
+        }
+
+        .img-fluid:hover {
+            transform: scale(1.05); /* Povečanje slike ob hoverju */
+        }
+
+        h3 {
+            color: #d4af37; /* Zlata barva za podnaslove */
+            margin-top: 30px; /* Razmik zgoraj */
+            transition: color 0.3s ease; /* Prehod za animacijo barve */
+        }
+
+        h3:hover {
+            color: #b89a2f; /* Temnejša zlata ob hoverju */
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px; /* Razmik spodaj */
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            transition: color 0.3s ease; /* Prehod za animacijo barve */
+        }
+
+        ul li:hover {
+            color: #d4af37; /* Zlata barva ob hoverju */
+        }
+
+        ul.list-unstyled {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px; /* Razmik spodaj */
+            text-align: left; /* Poravna seznam na levo */
+            margin: 0 auto; /* Samodejno odmakne seznam s strani */
+            max-width: 600px; /* Omeji širino seznama */
+        }
+
+        ul.list-unstyled li {
+            margin-bottom: 10px;
+            display: flex; /* Uporabi fleksibilno postavitev */
+            align-items: center; /* Poravna ikone in besedilo vertikalno */
+        }
+
+        ul.list-unstyled li i {
+            font-size: 1.2rem; /* Povečaj velikost ikone */
+            margin-right: 15px; /* Povečaj razmik med ikono in besedilom */
+            color: #d4af37; /* Zlata barva za ikone potrditve */
+            transition: color 0.3s ease; /* Prehod za animacijo barve */
+        }
+
+        ul.list-unstyled li i:hover {
+            color: #b89a2f; /* Temnejša zlata ob hoverju */
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: #d4af37; /* Zlata barva ozadja gumba */
+            border-color: #d4af37; /* Zlata barva robov gumba */
+            transition: background-color 0.3s ease, border-color 0.3s ease; /* Prehodi za animacijo */
+        }
+
+        .btn-primary:hover {
+            background-color: #b89a2f; /* Rahlo temnejša zlata barva ob hover */
+            border-color: #b89a2f; /* Rahlo temnejša zlata barva robov ob hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                padding: 20px 10px;
+            }
+
+            h1.display-4 {
+                font-size: 2.5rem; /* Manjša velikost besedila na manjših zaslonih */
+            }
+
+            p.lead {
+                font-size: 1.1rem; /* Manjša velikost besedila na manjših zaslonih */
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="sticky-top">
-        <header>
-            <p>Najboljša kavna storitev v Mariboru | <a href="#">Pokliči nas: +386 40 123 456</a></p>
-        </header>
+    <header class="sticky-top bg-light py-2">
+        <div class="container text-center">
+            <p>
+                Želite oddati naročilo? <strong>Pišite nam</strong> |
+                <a href="mailto:perosa@mail.com">perosa@mail.com <i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </p>
+        </div>
+    </header>
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container justify-content-center">
-                <a class="navbar-brand" href="index.html">
-                    <img class="Logo-image" src="logo.png" alt="Peroša Lusso Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Domov</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">O Nas</a>
-                        </li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container justify-content-center">
+            <a class="navbar-brand" href="index.html">
+                <img class="Logo-image" src="logo.png" alt="Peroša Lusso Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Domov</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">O Nas</a>
+                    </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Izdelki
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="kava.html">Kava</a>
-                                <a class="dropdown-item" href="cialde.html">Cialde</a>
-                                <a class="dropdown-item" href="cistila.html">Čistila</a>
-                                <a class="dropdown-item" href="skodelice.html">Skodelice</a>
-                            </div>
-                        </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Izdelki
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="kava.html">Kava</a>
+                            <a class="dropdown-item" href="cialde.html">Cialde</a>
+                            <a class="dropdown-item" href="cistila.html">Čistila</a>
+                            <a class="dropdown-item" href="skodelice.html">Skodelice</a>
+                        </div>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Kontakt</a>
-                        </li>
-                        <li class="nav-item"><a href="servis.html" class="nav-link active">Servis</a></li>
-                        <li class="nav-item"><a href="produkti.html" class="nav-link">Gostinska oprema</a></li>
-                    </ul>
-                </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontakt</a>
+                    </li>
+                    <li class="nav-item"><a href="servis.html" class="nav-link active">Servis</a></li>
+                    <li class="nav-item"><a href="produkti.html" class="nav-link">Gostinska oprema</a></li>
+                </ul>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
     <!-- Servis Section -->
     <section class="container my-5">
         <div class="text-center">
-            <h1>Servis Gostinske Opreme</h1>
+            <h1 class="display-4">Servis Gostinske Opreme</h1>
             <p class="lead">Nudimo vrhunski servis kavnih aparatov, ledomatov in pomivalnih strojev.</p>
         </div>
 
         <div class="row my-5">
             <div class="col-md-6">
-                <img src="images/servis.jpg" alt="Servis kavnih aparatov" class="img-fluid rounded">
+                <img src="images/slika-index.jpg" alt="Servis kavnih aparatov" class="img-fluid rounded">
             </div>
             <div class="col-md-6">
                 <h3>Zakaj izbrati naš servis?</h3>
@@ -85,8 +202,8 @@
             </div>
         </div>
 
-        <div class="text-center mt-5">
-            <h3>Kaj vključuje naš servis?</h3>
+        <div class="text-center mt-20">
+            <h3 >Kaj vključuje naš servis?</h3>
             <p>Naš servis vključuje celovit pregled in popravila vseh vrst gostinske opreme. Z uporabo originalnih delov in napredne diagnostike zagotavljamo, da bo vaša oprema delovala brezhibno.</p>
             <ul class="list-unstyled">
                 <li><i class="fas fa-check-circle"></i> Menjava filtrov in čistilnih sredstev</li>
@@ -112,11 +229,9 @@
                 </div>
                 <div class="col-md-6 text-left contact-info">
                     <h4 class="footer-title about-contact-title">Kontaktirajte Nas</h4>
-                    <p><i class="fas fa-map-marker-alt mr-2"></i>Pavel Peroša s.p., Vršnik 5, 2201 Zgornja Kungota,
-                        Slovenija</p>
+                    <p><i class="fas fa-map-marker-alt mr-2"></i>Pavel Peroša s.p., Vršnik 5, 2201 Zgornja Kungota, Slovenija</p>
                     <p><i class="fas fa-phone-alt mr-2"></i>Telefonska številka: +386 40 568 073</p>
-                    <p><i class="fas fa-envelope mr-2"></i>E-pošta: <a href="mailto:pavelperosa@gmail.com"
-                            class="footer-link-mail">pavelperosa@gmail.com</a></p>
+                    <p><i class="fas fa-envelope mr-2"></i>E-pošta: <a href="mailto:pavelperosa@gmail.com" class="footer-link-mail">pavelperosa@gmail.com</a></p>
                 </div>
             </div>
             <div class="row mt-3">
@@ -135,15 +250,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

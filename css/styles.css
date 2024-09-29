@@ -229,36 +229,147 @@ header a:hover {
     justify-content: flex-start;
   }
 }
+/* Centering .index-card and making each card full-width */
+.index-card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .index-card {
+  margin: 0 auto; /* Center the cards */
   margin-bottom: 30px;
   border: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 15px;
   overflow: hidden;
+  width: 100%; /* Set to full width */
+  max-width: 1000px; /* Control max width to make cards wider */
 }
+
 .index-card img {
-  height: 300px;
+  height: 400px; /* Increase height to match wider cards */
   width: 100%;
   object-fit: cover;
   object-position: center;
   transition: transform 0.3s ease;
 }
+
 .index-card img:hover {
   transform: scale(1.05);
 }
+
 .index-card .card-body {
   padding: 20px;
 }
+
 .index-card .card-title {
-  font-size: 1.75rem;
+  font-size: 1.75rem; /* Adjust font size if needed */
   font-weight: bold;
   margin-bottom: 15px;
+  white-space: normal; /* Allow text to wrap */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.3;
 }
+
+/* For responsive viewports, ensure the card title adjusts properly */
+@media (max-width: 768px) {
+  .index-card .card-title {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .index-card .card-title {
+    font-size: 1.3rem; /* Further reduce font size for mobile */
+    line-height: 1.2;
+  }
+}
+
+
 .index-card .card-text {
   font-size: 1rem;
   margin-bottom: 20px;
 }
+/* Responsive styles for smaller screens */
+@media (max-width: 1024px) {
+  .index-card, .product-container {
+    max-width: 90vw; /* Reduce max width */
+  }
+
+  .index-card .card-title, .product-title {
+    font-size: 4vw; /* Adjust title font size */
+  }
+
+  .index-card .card-text, .product-text {
+    font-size: 2.2vw; /* Adjust text font size */
+    margin-bottom: 3vw;
+  }
+
+  .index-card img, .product-image img {
+    height: 40vw; /* Adjust image height proportionally */
+  }
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 768px) {
+  .index-card, .product-container {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center content */
+    padding: 2vw; /* Add more padding */
+  }
+
+  .product-image {
+    margin-bottom: 2vw; /* Space between image and text */
+  }
+
+  .index-card img, .product-image img {
+    width: 100%; /* Full width images */
+    height: auto; /* Auto height to maintain aspect ratio */
+  }
+
+  .index-card .card-title, .product-title {
+    font-size: 5vw; /* Adjust title font size */
+  }
+
+  .index-card .card-text, .product-text {
+    font-size: 2.5vw; /* Adjust text size */
+    margin-bottom: 4vw;
+  }
+
+  .index-card .btn, .cta-button {
+    font-size: 3vw; /* Adjust button font size */
+    padding: 2vw 4vw; /* Adjust button padding */
+  }
+}
+
+/* For small screens (phones) */
+@media (max-width: 576px) {
+  .index-card, .product-container {
+    max-width: 100vw; /* Full width on small screens */
+    padding: 3vw; /* Add more padding */
+  }
+
+  .index-card img, .product-image img {
+    height: 45vw; /* Further reduce image height */
+  }
+
+  .index-card .card-title, .product-title {
+    font-size: 6vw; /* Larger title text */
+  }
+
+  .index-card .card-text, .product-text {
+    font-size: 3vw; /* Larger body text */
+    margin-bottom: 5vw;
+  }
+
+  .index-card .btn, .cta-button {
+    font-size: 4vw; /* Larger button text */
+    padding: 2.5vw 5vw; /* Larger button padding */
+  }
+}
+
+
 .btn {
   transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 25px;
@@ -275,7 +386,6 @@ header a:hover {
   flex-direction: row;
   align-items: center;
   height: 300px;
-  /* Adjust height */
 }
 .coffee-card img {
   border-radius: 15px 0 0 15px;
@@ -288,15 +398,15 @@ header a:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 .coffee-card .card-title {
-  color: #6f4e37;
+  color: #d4af37;
 }
 .coffee-card .btn-primary {
-  background-color: #6f4e37;
+  background-color: #d4af37;
   color: #fff;
   border: none;
 }
 .coffee-card .btn-primary:hover {
-  background-color: #4b3026;
+  background-color: #d4af37;
 }
 .coffee-card .card-body {
   padding: 20px;
@@ -377,15 +487,23 @@ header a:hover {
 .about-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(#d4af37);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .about-subtitle {
-  font-weight: 600;
+  font-family: 'Merriweather', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #6f4e37;
+  color: var(--primary-color);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  text-wrap: 'pretty';
 }
 
 .feature-box,
@@ -429,7 +547,7 @@ header a:hover {
 
 .feature-title,
 .service-title {
-  color: #6f4e37;
+  color: #d4af37;
   font-weight: 600;
 }
 
@@ -440,7 +558,7 @@ header a:hover {
 
 .about-contact-title {
   font-weight: 600;
-  color: #6f4e37;
+  color: #d4af37;
 }
 
 .about-email {
@@ -476,13 +594,13 @@ header a:hover {
 }
 
 .contact .form-button {
-  background-color: #6f4e37;
+  background-color: #d4af37;
   border-color: var(--light-color);
   color: var(--light-color);
 }
 
 .form-button {
-  background-color: #6f4e37;
+  background-color: #d4af37;
   border-color: var(--light-color);
   color: var(--light-color);
 }
