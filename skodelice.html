@@ -79,6 +79,22 @@
         object-position: bottom;
         object-fit: cover;
     }
+    #center-z {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* Ensures it spans its container */
+    max-width: 300px; /* Limits the size for better presentation */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: contain; /* Ensures the image fits within its dimensions without cropping */
+    border-radius: 5px; /* Adds subtle rounding for a polished look */
+    transition: transform 0.3s ease; /* Adds a hover effect */
+  }
+
+  /* Optional hover effect for interactivity */
+  #center-z:hover {
+    transform: scale(1.1); /* Slightly enlarges the image on hover */
+  }
 
     .hero-section {
   display: flex;
@@ -223,6 +239,17 @@
           <h3 class="product-title">Porcelanska skodelica</h3>
           <p class="product-description">Elegantne porcelanska skodelice temne barve.</p>
           <!--<p class="product-price"><strong>Set: 29,99 € brez DDV</strong></p>
+          <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p>-->
+        </div>
+      </div>
+      <div class="row mb-5 align-items-center product-display">
+        <div class="col-md-6">
+          <img src="images/zlicka/IMG_0143(1).jpg" class="img-fluid" id="center-z" alt="Kavna Žlička">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center text-content">
+          <h3 class="product-title">Žlička</h3>
+          <p class="product-description">Elegantna in praktična žlička, idealna za mešanje vašega najljubšega napitka.</p>
+          <!--<p class="product-price"><strong>1 Kos: 9,99 € brez DDV</strong></p>
           <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p>-->
         </div>
       </div>

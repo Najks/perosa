@@ -9,6 +9,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <style>
+
+  .styled-paragraph {
+    font-size: 1.2rem; 
+    line-height: 1.8; 
+    color: #333333; 
+    background-color: #f9f9f9; 
+    padding: 15px 20px; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; 
+    margin: 0 auto; 
+    text-align: center;
+  }
+
+      .about-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #d4af37;
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+    }
     h1, h2 {
       color: #2c2c2c;
     }
@@ -21,6 +44,7 @@
       display: inline-block;
       vertical-align: middle;
       animation: fadeIn 2s ease-in-out;
+      transform-origin: center;
     }
 
     h2 {
@@ -44,6 +68,7 @@
       justify-content: center;
       align-items: center;
       margin-bottom: 2rem;
+      animation: slideInBoth 1s ease-out;
     }
 
     .card {
@@ -52,6 +77,7 @@
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       margin-bottom: 2rem;
+      height: 100%;
     }
 
     .card:hover {
@@ -110,55 +136,69 @@
       color: #2c2c2c;
     }
 
-    /* Medijske poizvedbe */
-    @media (max-width: 767px) {
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Media Queries for mobile responsiveness */
+    @media (max-width: 768px) {
       h1 {
-        font-size: 1.75rem;
+        font-size: 1.8rem;
       }
 
       h2 {
         font-size: 1.5rem;
       }
 
-      .section-title {
-        font-size: 1.25rem;
+      .header-container {
+        margin-bottom: 1rem;
       }
 
       .card-body {
-        padding: 10px;
+        padding: 15px;
+      }
+
+      .card-title {
+        font-size: 1.1rem;
+      }
+
+      .card-text {
+        font-size: 0.9rem;
       }
 
       .btn-card {
         padding: 6px 14px;
-        font-size: 0.875rem;
-      }
-
-      .header-container {
-        margin-bottom: 1rem;
+        font-size: 0.9rem;
       }
     }
 
-    @media (max-width: 575px) {
-      .card img {
-        max-width: 100%;
-        height: auto;
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 1.5rem;
       }
 
-      .card {
-        margin-bottom: 1.5rem;
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      .btn-card {
+        padding: 5px 12px;
+        font-size: 0.85rem;
       }
 
       .card-title {
         font-size: 1rem;
       }
 
-      .btn-card {
-        padding: 5px 12px;
-        font-size: 0.75rem;
+      .card-text {
+        font-size: 0.85rem;
       }
 
-      .card-text {
-        font-size: 0.875rem;
+      .img-fluid {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
       }
     }
   </style>
@@ -185,7 +225,33 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
-            <!-- Navigacija -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Domov</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">O Nas</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Izdelki
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="kava.html">Kava</a>
+                <a class="dropdown-item" href="cialde.html">Cialde</a>
+                <a class="dropdown-item" href="cistila.html">Čistila</a>
+                <a class="dropdown-item" href="skodelice.html">Skodelice</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Kontakt</a>
+            </li>
+            <li class="nav-item"><a href="servis.html" class="nav-link">Servis</a>
+            </li>
+            <li class="nav-item"><a href="produkti.html" class="nav-link">Gostinska oprema</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -193,11 +259,12 @@
   </div>
 
   <main class="container my-5">
-    <div class="header-container">
-      <h1>Odkrijte Izbiro Gostinske Opreme</h1>
+    <div class="header-container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <h1 class="about-title" style="display: block;">Odkrijte Izbiro Gostinske Opreme</h1>
+      <p class="styled-paragraph">Vse predstavljene izdelke lahko naročite preko našega kontaktnega obrazca. <br>Za več informacij si oglejte podrobnosti spodaj.</p>
     </div>
 
-    <!-- Primer sekcij -->
+    <!-- Mlin – Remidag Section -->
     <section>
       <h2 class="section-title">Mlin - Remidag</h2>
       <div class="card">
@@ -208,24 +275,149 @@
           <div class="col-md-8">
             <div class="card-body">
               <h3 class="card-title">Mlin Remidag</h3>
-              <p class="card-text">Remidag je vodilni proizvajalec mlinov za kavo.</p>
-              <a href="https://example.com/remidag" class="btn btn-card" target="_blank">Pojdi na spletno stran</a>
+              <p class="card-text">Remidag je vodilni proizvajalec mlinov za kavo, ki zagotavljajo enakomerno in natančno mletje. Oglejte si več na njihovi spletni strani.</p>
+              <a href="https://www.remidag.it/" class="btn btn-card" target="_blank">Pojdi na spletno stran</a>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Kavni avtomati - Futura Section -->
+    <section>
+      <h2 class="section-title">Kavni avtomati - Futura</h2>
+      <div class="card">
+        <div class="row no-gutters align-items-center">
+          <div class="col-md-4">
+            <img src="futura.png" alt="Kavni avtomati Futura" class="img-fluid">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">Kavni Avtomati Futura</h3>
+              <p class="card-text">Futura kavni avtomati so znani po svoji zanesljivosti in enostavni uporabi. Preverite podrobnosti na spletni strani.</p>
+              <a href="https://futuracoffeemachines.com/en/" class="btn btn-card" target="_blank">Pojdi na spletno stran</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pomivalni Stroji Section -->
+    <section>
+      <h2 class="section-title">Pomivalni Stroji</h2>
+      <div class="card">
+        <div class="row no-gutters align-items-center">
+          <div class="col-md-4">
+            <img src="pomiv.png" alt="Pomivalni Stroji" class="img-fluid">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">Pomivalni Stroji</h3>
+              <p class="card-text">Profesionalni pomivalni stroji za gostinsko uporabo. Več informacij o teh izdelkih najdete na spletni strani proizvajalca.</p>
+              <a href="https://www.devecchigaetano.com/en/product/serie-isi/" class="btn btn-card" target="_blank">Pojdi na spletno stran</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ledomati Section -->
+    <section>
+      <h2 class="section-title">Ledomati</h2>
+      <div class="card">
+        <div class="row no-gutters align-items-center">
+          <div class="col-md-4">
+            <img src="ledomati.png" alt="Ledomati" class="img-fluid max-width-60 margin-left-70 margin-bottom-20">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">Ledomati</h3>
+              <p class="card-text">Ledomati so ključni za vsako gostinsko opremo. Oglejte si E 21 nano na spletni strani proizvajalca.</p>
+              <a href="https://icematic.eu/en/" class="btn btn-card" target="_blank">Pojdi na spletno stran</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servis Gostinske Opreme Section -->
+    <section>
+      <h2 class="section-title">Servis Gostinske Opreme</h2>
+      <div class="card">
+        <div class="row no-gutters align-items-center">
+          <div class="col-md-4">
+            <img src="images/slika-index.jpg" alt="Servis Gostinske Opreme" class="img-fluid max-width-90 margin-left-20">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">Servis Gostinske Opreme</h3>
+              <p class="card-text">Za servis gostinske opreme se obrnite na nas. Več informacij najdete na naši spletni strani.</p>
+              <a href="contact.html" class="btn btn-card" target="_blank">Kontaktirajte nas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rezervni Deli Section -->
+    <section>
+      <h2 class="section-title">Rezervni Deli</h2>
+      <div class="card">
+        <div class="row no-gutters align-items-center">
+          <div class="col-md-4">
+            <img src="rezervni.png" alt="Rezervni Deli" class="img-fluid max-width-55 margin-left-50">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">Rezervni Deli</h3>
+              <p class="card-text">Potrebujete rezervne dele? Na voljo imamo širok spekter delov za različne gostinske naprave.</p>
+              <a href="contact.html" class="btn btn-card" target="_blank">Kontaktirajte nas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="bg-dark text-white text-center py-4">
     <div class="container">
-      <!-- Vsebina footerja -->
+      <div class="row">
+        <div class="col-md-6 text-left">
+          <h4 class="footer-title">Hitre Povezave</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Domov</a></li>
+            <li><a href="about.html" class="footer-link">O Nas</a></li>
+            <li><a href="products.html" class="footer-link">Izdelki</a></li>
+            <li><a href="cialde.html" class="footer-link">Cialde</a></li>
+            <li><a href="contact.html" class="footer-link">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-left contact-info">
+          <h4 class="footer-title about-contact-title">Kontaktirajte Nas</h4>
+          <p><i class="fas fa-map-marker-alt mr-2"></i>Pavel Peroša s.p., Vršnik 5, 2201 Zgornja Kungota, Slovenija</p>
+          <p><i class="fas fa-phone-alt mr-2"></i>Telefonska številka: +386 40 568 073</p>
+          <p><i class="fas fa-envelope mr-2"></i>E-pošta: <a href="mailto:pavelperosa@gmail.com" class="footer-link-mail">pavelperosa@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12 text-center">
+          <div class="social-icons">
+            <a href="#" class="mr-3"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="mr-3"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
+    <p class="mt-3 footer-credits">&copy; 2024 Peroša. Vse pravice pridržane.</p>
+    <a href="splosni-pogoji.html" class="footer-a">Pogoji poslovanja</a>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>

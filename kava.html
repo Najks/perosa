@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,160 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    .product-display img {
-      max-height: 500px;
-      object-fit: cover;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
+    /* Global Styling */
+    *, *::before, *::after {
+      box-sizing: border-box; /* Globalna nastavitev box-sizing */
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Prepreči horizontalni overflow */
+    }
+
+    .gold {
+      color: #d4af37; /* Zlata barva */
+    }
+
+    .brown {
+      color: #6f4e37; /* Temno rjava barva */
+    }
+
+    .about-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #d4af37;
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Lusso Light Logo Styling */
+    .lusso-light {
+      max-width: 100%;
+      height: auto;
+      max-height: 95px; /* Originalna višina */
+    }
+
+    /* Prilagoditve za manjše zaslone */
+    @media (max-width: 992px) {
+      .lusso-light {
+        max-height: 80px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .lusso-light {
+        max-height: 60px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .lusso-light {
+        max-height: 50px;
+      }
+    }
+
+    /* Hero Section Styling */
+    .hero {
+      background: url('./kava-hero3.jpg') no-repeat center center/cover;
+      min-height: 100vh; /* Vedno čez cel zaslon */
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* Temnejši prekrivni sloj */
+      z-index: 1;
+    }
+
+    .hero-content {
+      z-index: 2;
+      max-width: 800px; /* Omeji širino vsebine hero */
+      padding: 0 15px; /* Dodaj notranji rob za manjše zaslone */
+    }
+
+    .hero img {
+      max-width: 100%; /* Slika naj ne preseže širine zaslona */
+      height: auto; /* Ohrani razmerje slike */
+      margin-bottom: 20px; /* Dodaj spodnji rob */
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Medijske poizvedbe za odzivnost */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 80vh; /* Prilagodi višino za mobilne naprave */
+      }
+
+      .hero img {
+        width: 60%; /* Manjša slika na manjših zaslonih */
+      }
+
+      .hero p {
+        font-size: 1.2rem; /* Manjše besedilo na manjših zaslonih */
+      }
+
+      .button-hero {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        min-height: 70vh; /* Še bolj prilagojena višina za najmanjše zaslone */
+      }
+
+      .hero img {
+        width: 50%; /* Še manjša slika na zelo majhnih zaslonih */
+      }
+
+      .hero p {
+        font-size: 1rem; /* Manjše besedilo za mobilne naprave */
+      }
+
+      .button-hero {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Product Display Styling */
+    .product-display {
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .product-display:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-display img {
+      max-width: 100%; /* Prepreči prelivanje slik */
+      height: auto;
+      margin: 0 auto 20px; /* Centriranje in dodajanje spodnjega roba */
+      display: block; /* Odstrani morebitne dodatne margine */
+      transition: transform 0.3s ease-in-out;
     }
 
     .product-display img:hover {
@@ -49,34 +198,83 @@
       font-style: italic;
     }
 
-    .product-display {
-      padding: 1.5rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      margin-bottom: 2rem;
+    /* Responsivnost za product-display */
+    @media (max-width: 768px) {
+      .product-display img {
+        max-width: 80%; /* Prilagodi velikost slike */
+      }
+
+      .product-display h3 {
+        font-size: 1.75rem;
+      }
+
+      .product-display .product-description {
+        font-size: 1rem;
+      }
     }
 
-    .product-display:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    @media (max-width: 576px) {
+      .product-display img {
+        max-width: 70%; /* Še manjša slika na zelo majhnih zaslonih */
+      }
+
+      .product-display h3 {
+        font-size: 1.5rem;
+      }
+
+      .product-display .product-description {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* Gumb za scrollanje */
+    .button-hero {
+      background: transparent;
+      border: 2px solid #d4af37; /* Zlata obroba */
+      color: #d4af37; /* Zlata barva za tekst */
+      padding: 0.75rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .button-hero:hover {
+      background-color: #d4af37;
+      color: #2c2c2c; /* Temno siva ob lebdenju */
+    }
+
+    /* Styled Paragraph */
+    .styled-paragraph {
+      font-size: 1.2rem; /* Povečana velikost pisave */
+      line-height: 1.8; /* Dodatni razmik med vrsticami */
+      color: #333333; /* Nevtralna temna barva za boljšo čitljivost */
+      background-color: #f9f9f9; /* Svetlo sivo ozadje za kontrast */
+      padding: 15px 20px; /* Notranji robovi za več zraka okoli besedila */
+      border: 1px solid #ddd; /* Nežna obroba za okvir */
+      border-radius: 8px; /* Zaobljeni robovi za mehkejši izgled */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Rahla senca za globino */
+      max-width: 600px; /* Največja širina za boljši nadzor */
+      margin: 0 auto 20px; /* Centriranje elementa in spodnji rob */
+      text-align: center; /* Centrirano besedilo */
     }
   </style>
 </head>
+
 <body>
   <div class="sticky-top">
     <header>
       <p>
         Želite oddati naročilo? <strong>Pišite nam</strong> |
         <a href="mailto:perosa@mail.com">perosa@mail.com <i class="fa fa-envelope" aria-hidden="true"></i></a>
-      </p>    </header>
+      </p>
+    </header>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container justify-content-center">
         <a class="navbar-brand" href="index.html">
-          <img class="Logo-image" src="logo.png" alt="Peroša Lusso Logo">
+          <img class="Logo-image lusso-light img-fluid" src="logo.png" alt="Peroša Lusso Logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,92 +305,85 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Kontakt</a>
             </li>
-            <li class="nav-item"><a href="servis.html" class="nav-link">Servis</a>
-            </li>
-            <li class="nav-item"><a href="produkti.html" class="nav-link">Gostinska oprema</a>
-            </li>
+            <li class="nav-item"><a href="servis.html" class="nav-link">Servis</a></li>
+            <li class="nav-item"><a href="produkti.html" class="nav-link">Gostinska oprema</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </div>
 
-  <main class="container my-5">
-    <section class="hero">
-      <div class="hero-content text-center">
-        <h1>Odkrijte Našo Kavo v Zrnu in Mleto Kavo</h1>
-        <p>Uživajte v izjemnem okusu in aromi naših kavnih izdelkov</p>
-        <button href="#coffee-products" class="button-hero" id="scroll-to-products">Oglejte si izdelke</button>
-      </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content text-center">
+      <img src="lusso-light.png" alt="Lusso Light Logo" class="lusso-light img-fluid">
+      <p>je lastna blagovna znamka.
+        Je naš edinstven koncept razkošja kave.</p>
+      <button class="button-hero" id="scroll-to-products">Oglejte si izdelke</button>
+    </div>
+  </section>
 
+  <main class="container my-5">
+
+    <!-- Naša Kava v Zrnu Section -->
     <section id="coffee-products" class="my-5">
       <div class="text-center mb-5">
-        <h2 class="mb-4">Naša Kava v Zrnu</h2>
+        <h2 class="about-title">Izdelki so predstavljeni spodaj</h2>
+        <p class="text-center styled-paragraph">
+          Vse predstavljene izdelke lahko naročite preko našega kontaktnega obrazca. <br>Za več informacij si oglejte podrobnosti spodaj.
+        </p>
       </div>
 
       <!-- Product Display: Lusso Kava v Zrnu -->
       <div class="row mb-5 align-items-center product-display">
         <div class="col-md-6 order-md-2">
-          <img src="images/kava-zrno/Kava-zrno.jpg" class="img-fluid" alt="Lusso Kava v Zrnu">
+          <img src="download.png" class="img-fluid" alt="Lusso Kava v Zrnu">
         </div>
         <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-content">
           <h3 class="product-title">Lusso Kava v Zrnu</h3>
-          <p class="product-description">LUSSO caffè je kava za gostince, odlične mešanice Arabice in
-            Robuste, ki vas očara s čokoladnim okusom ter krepko kremasto
-            kremo s pridihom lešnikov. Njeno uživanje vam pričara eksplozijo
-            razkošja okusov.</p>
+          <p class="product-description"><img src="lusso-dark.png" alt="Lusso logo" width="25%" style="display: inline; margin: 0; padding-right: 3px; margin-bottom: 3px;">  je <span class="brown"> kava za gostince</span>, odlične mešanice Arabice in Robuste, ki vas očara s čokoladnim okusom ter krepko kremasto kremo s pridihom lešnikov. Njeno uživanje vam pričara <span class="brown">eksplozijo razkošja okusov.</span></p>
           <!-- <p class="product-price"><strong>1 kg: 19,99 € brez DDV</strong></p>
           <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p> -->
         </div>
       </div>
 
+        <!-- Product Display: Lusso Mleta Kava -->
+        <div class="row mb-5 align-items-center product-display">
+          <div class="col-md-6 order-md-2">
+            <img src="images/kava-zrno/ground-coffee.jpg" class="img-fluid" alt="Lusso Mleta Kava">
+          </div>
+          <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-content">
+            <h3 class="product-title">Lusso Mleta Kava</h3>
+            <p class="product-description"><span style="color: #6f4e37; font-weight: bold;">Fina mleta kavna mešanica, pražena do popolnosti.</span> Idealna za pripravo espressa, cappuccina ali katere koli kave po vaši želji.</p>
+            <!-- <p class="product-price"><strong>250 g: 5,99 € brez DDV</strong></p>
+            <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p> -->
+          </div>
+        </div>
+      </section>
 
-    <section id="ground-coffee-products" class="my-5">
-      <div class="text-center mb-5">
-        <h2 class="mb-4">Naša Mleta Kava</h2>
-      </div>
 
-      <!-- Product Display: Lusso Mleta Kava -->
-      <div class="row mb-5 align-items-center product-display">
-        <div class="col-md-6 order-md-2">
-          <img src="images/kava-zrno/ground-coffee.jpg" class="img-fluid" alt="Lusso Mleta Kava">
+        <!-- Sugar Products: Pakirani Sladkor -->
+        <div class="row mb-5 align-items-center product-display">
+          <div class="col-md-6 order-md-2">
+            <img src="images/sladkorji.png" class="img-fluid" alt="Pakirani sladkor">
+          </div>
+          <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-content">
+            <h3 class="product-title">Pakirani Sladkor</h3>
+            <p class="product-description">Sladkor, servirni (beli, trstni, rjavi). Povezava: <a href="https://www.pakirnica.si/" target="_blank">PAKIRNICA TIMS d.o.o. – pakirnica sladkorja</a></p>
+          </div>
         </div>
-        <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-content">
-          <h3 class="product-title">Lusso Mleta Kava</h3>
-          <p class="product-description"><span style="color: #6f4e37; font-weight: bold;">Fina mleta kavna mešanica, pražena do popolnosti.</span> Idealna za pripravo espressa, cappuccina ali katere koli kave po vaši želji.</p>
-          <!--<p class="product-price"><strong>250 g: 5,99 € brez DDV</strong></p>
-           <p class="product-shipping"><em>BREZPLAČNA DOSTAVA nad 50 € znotraj SI</em></p>-->
-        </div>
-      </div>
-    </section>
 
-    <section id="sugar-cookies" class="my-5">
-      <div class="text-center mb-5">
-        <h2 class="mb-4">Sladkorji in Piskoti</h2>
-      </div>
-
-      <!-- Sugar Products -->
-      <div class="row mb-5 align-items-center product-display">
-        <div class="col-md-6 order-md-2">
-          <img src="images/sladkorji.png" class="img-fluid" alt="Pakirani sladkor">
+        <!-- Sugar Products: Piškoti in Crispiji -->
+        <div class="row mb-5 align-items-center product-display">
+          <div class="col-md-6 order-md-2">
+            <img src="images/kavni_piskoti.png" class="img-fluid" alt="Piskotki in Crispiji">
+          </div>
+          <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-content">
+            <h3 class="product-title">Piškoti in Crispiji</h3>
+            <p class="product-description">Popoln dodatek k vaši kavi – izberite med različnimi piškoti in crispiji, ki bodo dopolnili vašo kavno izkušnjo.</p>
+          </div>
         </div>
-        <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-content">
-          <h3 class="product-title">Pakirani Sladkor</h3>
-          <p class="product-description">Sladkor, servirni (beli, trstni, rjavi). Povezava: <a href="https://www.pakirnica.si/" target="_blank">PAKIRNICA TIMS d.o.o. – pakirnica sladkorja</a></p>
-        </div>
-      </div>
-
-      <div class="row mb-5 align-items-center product-display">
-        <div class="col-md-6">
-          <img src="images/kavni_piskoti.png" class="img-fluid" alt="Piskotki in Crispiji">
-        </div>
-        <div class="col-md-6 d-flex flex-column justify-content-center text-content">
-          <h3 class="product-title">Piskoti in Crispiji</h3>
-          <p class="product-description">Popoln dodatek k vaši kavi – izberite med različnimi piskoti in crispiji, ki bodo dopolnili vašo kavno izkušnjo.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
   </main>
 
@@ -213,7 +404,8 @@
           <h4 class="footer-title about-contact-title">Kontaktirajte Nas</h4>
           <p><i class="fas fa-map-marker-alt mr-2"></i>Pavel Peroša s.p., Vršnik 5, 2201 Zgornja Kungota, Slovenija</p>
           <p><i class="fas fa-phone-alt mr-2"></i>Telefonska številka: +386 40 568 073</p>
-          <p><i class="fas fa-envelope mr-2"></i>E-pošta: <a href="mailto:pavelperosa@gmail.com" class="footer-link-mail">pavelperosa@gmail.com</a></p>
+          <p><i class="fas fa-envelope mr-2"></i>E-pošta: <a href="mailto:pavelperosa@gmail.com"
+              class="footer-link-mail">pavelperosa@gmail.com</a></p>
         </div>
       </div>
       <div class="row mt-3">
@@ -235,7 +427,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
   <script>
-    document.getElementById('scroll-to-products').addEventListener('click', function(event) {
+    document.getElementById('scroll-to-products').addEventListener('click', function (event) {
       event.preventDefault();
       document.querySelector('#coffee-products').scrollIntoView({
         behavior: 'smooth'
@@ -243,4 +435,5 @@
     });
   </script>
 </body>
+
 </html>

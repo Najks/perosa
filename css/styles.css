@@ -46,12 +46,12 @@ h6 {
 /* Hero Section Styling */
 .hero {
   background: url('../tina-guina-obV_LM0KjxY-unsplash.jpg') no-repeat center center/cover;
-  height: 90vh;
+  min-height: 100vh; /* Vedno čez cel zaslon */
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff; /* Belo besedilo */
+  color: #ffffff;
   text-align: center;
 }
 
@@ -70,18 +70,55 @@ h6 {
   z-index: 2;
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+.hero img {
+  max-width: 100%; /* Slika naj ne preseže širine zaslona */
+  height: auto; /* Ohrani razmerje slike */
 }
 
 .hero p {
   font-size: 1.4rem;
   margin-bottom: 1.5rem;
 }
+
+/* Medijske poizvedbe za odzivnost */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh; /* Prilagodi višino za mobilne naprave */
+  }
+
+  .hero img {
+    width: 60%; /* Manjša slika na manjših zaslonih */
+  }
+
+  .hero p {
+    font-size: 1.2rem; /* Manjše besedilo na manjših zaslonih */
+  }
+
+  .button-hero {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: 70vh; /* Še bolj prilagojena višina za najmanjše zaslone */
+  }
+
+  .hero img {
+    width: 50%; /* Še manjša slika na zelo majhnih zaslonih */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Manjše besedilo za mobilne naprave */
+  }
+
+  .button-hero {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
 
 .button-hero {
   background: transparent;
@@ -483,27 +520,10 @@ header a:hover {
   width: 50%;
 }
 
-/* About Section Styles */
-.about-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(#d4af37);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  font-family: 'Merriweather', serif;
-  text-transform: uppercase;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.about-subtitle {
-  font-family: 'Merriweather', serif;
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  text-wrap: 'pretty';
+.feature-container,
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .feature-box,
@@ -513,7 +533,13 @@ header a:hover {
   padding: 1.5rem;
   background-color: var(--light-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  min-height: 170px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Vsaka škatla bo zavzela celotno višino */
+  width: 90%;
+  margin: 1rem; /* Prostor med škatlami */
 }
 
 .feature-box:hover,
@@ -532,17 +558,16 @@ header a:hover {
 
 .feature-icon i {
   font-size: 3rem;
-  /* Increase the size for better visibility */
 }
 
 .feature-icon:hover {
   color: var(--dark-color);
-  /* Darker shade on hover */
 }
 
 .feature-content p,
 .service-box p {
   margin-bottom: 0;
+  flex-grow: 1; /* Razširi vsebino škatle */
 }
 
 .feature-title,
@@ -556,18 +581,12 @@ header a:hover {
   color: var(--text-color);
 }
 
-.about-contact-title {
-  font-weight: 600;
-  color: #d4af37;
-}
-
-.about-email {
-  color: var(--primary-color);
-}
-
-.about-email:hover {
-  text-decoration: underline;
-  color: var(--primary-color);
+/* Dodaj naslednje, če želiš enake višine tudi na manjših zaslonih */
+@media (max-width: 768px) {
+  .feature-box, .service-box {
+    width: 100%; /* V manjši resoluciji bodo škatle 100% širine */
+    margin: 0.5rem 0; /* Zmanjšaj razmik med njimi */
+  }
 }
 
 

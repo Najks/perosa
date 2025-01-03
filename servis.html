@@ -8,70 +8,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- GSAP for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        /* Specifične stilizacije za servis.html */
+
         /* Servis Section */
-        section {
-            padding: 30px 15px;
+        .servis-section {
+            padding: 60px 15px;
         }
 
-        h1.display-4 {
+        .servis-section h1.display-4 {
             color: #d4af37; /* Zlata barva za glavni naslov */
             margin-bottom: 20px; /* Razmik spodaj */
             transition: color 0.3s ease; /* Prehod za animacijo barve */
         }
 
-        h1.display-4:hover {
+        .servis-section h1.display-4:hover {
             color: #b89a2f; /* Temnejša zlata ob hoverju */
         }
 
-        p.lead {
+        .servis-section p.lead {
             font-size: 1.25rem;
             color: #333; /* Temno siva barva za podnaslov */
             margin-bottom: 30px; /* Razmik spodaj */
         }
 
-        .img-fluid {
+        .servis-section img.img-fluid {
             max-width: 100%;
             height: auto;
             border-radius: 8px; /* Rahlo zaobljeni robovi slik */
             transition: transform 0.3s ease; /* Prehod za animacijo slike */
         }
 
-        .img-fluid:hover {
+        .servis-section img.img-fluid:hover {
             transform: scale(1.05); /* Povečanje slike ob hoverju */
         }
 
-        h3 {
+        .servis-section h3 {
             color: #d4af37; /* Zlata barva za podnaslove */
             margin-top: 30px; /* Razmik zgoraj */
             transition: color 0.3s ease; /* Prehod za animacijo barve */
         }
 
-        h3:hover {
+        .servis-section h3:hover {
             color: #b89a2f; /* Temnejša zlata ob hoverju */
         }
 
-        ul {
+        .servis-section ul {
             list-style-type: disc;
             padding-left: 20px;
             margin-bottom: 20px; /* Razmik spodaj */
         }
 
-        ul li {
+        .servis-section ul li {
             margin-bottom: 10px;
             transition: color 0.3s ease; /* Prehod za animacijo barve */
         }
 
-        ul li:hover {
+        .servis-section ul li:hover {
             color: #d4af37; /* Zlata barva ob hoverju */
         }
 
-        ul.list-unstyled {
+        .servis-section ul.list-unstyled {
             list-style-type: none;
             padding: 0;
             margin-bottom: 20px; /* Razmik spodaj */
@@ -80,46 +86,46 @@
             max-width: 600px; /* Omeji širino seznama */
         }
 
-        ul.list-unstyled li {
+        .servis-section ul.list-unstyled li {
             margin-bottom: 10px;
             display: flex; /* Uporabi fleksibilno postavitev */
             align-items: center; /* Poravna ikone in besedilo vertikalno */
         }
 
-        ul.list-unstyled li i {
+        .servis-section ul.list-unstyled li i {
             font-size: 1.2rem; /* Povečaj velikost ikone */
             margin-right: 15px; /* Povečaj razmik med ikono in besedilom */
             color: #d4af37; /* Zlata barva za ikone potrditve */
             transition: color 0.3s ease; /* Prehod za animacijo barve */
         }
 
-        ul.list-unstyled li i:hover {
+        .servis-section ul.list-unstyled li i:hover {
             color: #b89a2f; /* Temnejša zlata ob hoverju */
         }
 
         /* Buttons */
-        .btn-primary {
+        .servis-section .btn-primary {
             background-color: #d4af37; /* Zlata barva ozadja gumba */
             border-color: #d4af37; /* Zlata barva robov gumba */
             transition: background-color 0.3s ease, border-color 0.3s ease; /* Prehodi za animacijo */
         }
 
-        .btn-primary:hover {
+        .servis-section .btn-primary:hover {
             background-color: #b89a2f; /* Rahlo temnejša zlata barva ob hover */
             border-color: #b89a2f; /* Rahlo temnejša zlata barva robov ob hover */
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            section {
-                padding: 20px 10px;
+            .servis-section {
+                padding: 40px 10px;
             }
 
-            h1.display-4 {
+            .servis-section h1.display-4 {
                 font-size: 2.5rem; /* Manjša velikost besedila na manjših zaslonih */
             }
 
-            p.lead {
+            .servis-section p.lead {
                 font-size: 1.1rem; /* Manjša velikost besedila na manjših zaslonih */
             }
         }
@@ -127,6 +133,7 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header class="sticky-top bg-light py-2">
         <div class="container text-center">
             <p>
@@ -178,40 +185,43 @@
         </div>
     </nav>
 
-    <!-- Servis Section -->
-    <section class="container my-5">
-        <div class="text-center">
-            <h1 class="display-4">Servis Gostinske Opreme</h1>
-            <p class="lead">Nudimo vrhunski servis kavnih aparatov, ledomatov in pomivalnih strojev.</p>
-        </div>
-
-        <div class="row my-5">
-            <div class="col-md-6">
-                <img src="images/slika-index.jpg" alt="Servis kavnih aparatov" class="img-fluid rounded">
+    <!-- Main Content -->
+    <main>
+        <!-- Servis Section -->
+        <section class="servis-section container my-5">
+            <div class="text-center">
+                <h1 class="display-4">Servis Gostinske Opreme</h1>
+                <p class="lead">Nudimo vrhunski servis kavnih aparatov, ledomatov in pomivalnih strojev.</p>
             </div>
-            <div class="col-md-6">
-                <h3>Zakaj izbrati naš servis?</h3>
-                <p>V podjetju Peroša smo specializirani za profesionalni servis gostinske opreme, ki vključuje:</p>
-                <ul>
-                    <li>Redno vzdrževanje kavnih aparatov</li>
-                    <li>Popravila ledomatov in pomivalnih strojev</li>
-                    <li>Servis na terenu po dogovoru</li>
-                    <li>Hitro odzivni čas in vrhunska tehnična podpora</li>
+
+            <div class="row my-5">
+                <div class="col-md-6">
+                    <img src="images/slika-index.jpg" alt="Servis kavnih aparatov" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h3>Zakaj izbrati naš servis?</h3>
+                    <p>V podjetju Peroša smo specializirani za profesionalni servis gostinske opreme, ki vključuje:</p>
+                    <ul>
+                        <li>Redno vzdrževanje kavnih aparatov</li>
+                        <li>Popravila ledomatov in pomivalnih strojev</li>
+                        <li>Servis na terenu po dogovoru</li>
+                        <li>Hitro odzivni čas in vrhunska tehnična podpora</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary mt-3">Kontaktirajte nas</a>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <h3>Kaj vključuje naš servis?</h3>
+                <p>Naš servis vključuje celovit pregled in popravila vseh vrst gostinske opreme. Z uporabo originalnih delov in napredne diagnostike zagotavljamo, da bo vaša oprema delovala brezhibno.</p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check-circle"></i> Menjava filtrov in čistilnih sredstev</li>
+                    <li><i class="fas fa-check-circle"></i> Diagnostika in odprava napak</li>
+                    <li><i class="fas fa-check-circle"></i> Čiščenje in optimizacija delovanja aparatov</li>
                 </ul>
-                <a href="contact.html" class="btn btn-primary mt-3">Kontaktirajte nas</a>
             </div>
-        </div>
-
-        <div class="text-center mt-20">
-            <h3 >Kaj vključuje naš servis?</h3>
-            <p>Naš servis vključuje celovit pregled in popravila vseh vrst gostinske opreme. Z uporabo originalnih delov in napredne diagnostike zagotavljamo, da bo vaša oprema delovala brezhibno.</p>
-            <ul class="list-unstyled">
-                <li><i class="fas fa-check-circle"></i> Menjava filtrov in čistilnih sredstev</li>
-                <li><i class="fas fa-check-circle"></i> Diagnostika in odprava napak</li>
-                <li><i class="fas fa-check-circle"></i> Čiščenje in optimizacija delovanja aparatov</li>
-            </ul>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
